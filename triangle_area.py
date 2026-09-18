@@ -1,8 +1,8 @@
 # FILE NAME - triangle_area.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 9-17-26
+# BRIEF DESCRIPTION:  Math with python
 
 
 
@@ -16,15 +16,15 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+base = float(input("1"))
+height = float(input("1"))
+area = 0.5 * base * height
+
+base = float(input("8"))
+height = float(input("4"))
+area = 0.5 * base * height
     
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -66,13 +66,13 @@ The area of the triangle is 16.0
 
 1. What is the flow of the program? Which line of code kicks off the process?
 
-
+giving the parameters for the variables
 
 
 
 2. What was the hardest part of this lab?
 
-
+Remembering where to put all the variables
 
 
 
