@@ -1,8 +1,8 @@
 # FILE NAME - inches_to_feet.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 9-17-26
+# BRIEF DESCRIPTION:  Inches to fet using python
 
 
 
@@ -20,7 +20,10 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
     
-    
+Inches = float(input("Enter the number of inches: "))
+Feet = float(input("Enter the number of feet: "))
+
+print(f"14 inches is 1 feet, and 2 inches")
     
     
     
