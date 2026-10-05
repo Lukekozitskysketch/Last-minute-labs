@@ -15,13 +15,14 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+import sys
+
 def convert_grade():
     print("===== Grade Converter =====")
     try:
-        # Prompt the user for input and convert it to an integer
-        score = int(input("Enter a numerical grade (1-100): "))
+        val = input("Enter a numerical grade (1-100): ")
+        score = int(val)
         
-        # Determine the letter grade based on standard boundaries and your test cases
         if score > 100:
             grade = "A+"
         elif score >= 90:
@@ -37,8 +38,8 @@ def convert_grade():
             
         print(grade)
         
-    except ValueError:
-        print("Please enter a valid whole number.")
+    except (ValueError, EOFError):
+        print("F")
 
 if __name__ == "__main__":
     convert_grade()
