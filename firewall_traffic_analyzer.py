@@ -14,11 +14,19 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+import sys
+
 def analyze_traffic():
     print("=== Network Traffic Security Analyzer ===\n")
     try:
-        port = int(input("Enter the port number (e.g., 80, 22, 443, 3389): "))
-        size = int(input("Enter the data transfer size in megabytes (MB): "))
+        port_input = input("Enter the port number (e.g., 80, 22, 443, 3389): ").strip()
+        size_input = input("Enter the data transfer size in megabytes (MB): ").strip()
+        
+        if not port_input or not size_input:
+            return
+            
+        port = int(port_input)
+        size = int(size_input)
         
         if port == 443:
             risk = "LOW RISK: Secure encrypted transfer detected."
@@ -35,7 +43,7 @@ def analyze_traffic():
         pass
 
 if __name__ == "__main__":
-    analyze_traffic()
+    analyze_traffi
 ########### END YER CODE ABOVE THIS LINE ###########
 
     
