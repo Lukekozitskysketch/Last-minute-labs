@@ -2,7 +2,7 @@
 
 # NAME: Luke Kozitsky
 # DATE: 10-5-26
-# BRIEF DESCRIPTION:  Traffic analyzer 
+# BRIEF DESCRIPTION:  Traffic analyzer  
 
 
 
