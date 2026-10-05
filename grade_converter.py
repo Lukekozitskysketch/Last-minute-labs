@@ -1,8 +1,8 @@
 # FILE NAME - grade_converter.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-5-26
+# BRIEF DESCRIPTION:  Python grade converter
 
 
 
@@ -15,14 +15,28 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+def convert_grade():
+    print("===== Grade Converter =====")
+    try:
+        score = int(input("Enter a numerical grade (1-100):"))
+        if score > 100:
+            grade = "A+"
+        elif score >= 90:
+            grade = "A"
+        elif score >=80:
+            grade = "B"
+        elif score >= 70:
+            grade = "C"
+        elif score >= 65:
+            grade = "D"
+        else:
+            grade = "F"
+        print(grade)
+        except ValueError:
+        print("Please enter a valid whole number.")
 
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    convert_grade()
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -77,7 +91,7 @@ D
 1. What is something you would tell a future student to be careful about when
    doing this lab?
 
-
+To get it right
 
 
 
