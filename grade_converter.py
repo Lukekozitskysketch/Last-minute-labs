@@ -95,7 +95,7 @@ D
 1. What is something you would tell a future student to be careful about when
    doing this lab?
 
-To get it right
+To not foget to print the grade
 
 
 
