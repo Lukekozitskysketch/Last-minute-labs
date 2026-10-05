@@ -43,7 +43,7 @@ def analyze_traffic():
         pass
 
 if __name__ == "__main__":
-    analyze_traffi
+    analyze_traffic()
 ########### END YER CODE ABOVE THIS LINE ###########
 
     
