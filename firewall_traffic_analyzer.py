@@ -1,8 +1,8 @@
 # FILE NAME - firewall_traffic_analyzer.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-5-26
+# BRIEF DESCRIPTION:  Traffic analyzer
 
 
 
@@ -15,6 +15,32 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+def analyze_traffic():
+    print("=== Network Traffic Security Analyzer ===\n")
+    try:
+        port = int(input("Enter the port number (e.g., 80, 22, 443, 3389): "))
+        size = int(input("Enter the data transfer size in megabytes (MB): "))
+        
+        if port == 443:
+            risk = "LOW RISK: Secure encrypted transfer detected."
+        elif port == 22:
+            risk = "LOW RISK: Secure remote access connection."
+        elif port == 80 and size > 500:
+            risk = "HIGH RISK: Large unencrypted data transfer over HTTP."
+        elif port == 3389:
+            risk = "MEDIUM RISK: Remote Desktop exposure check required."
+        else:
+            risk = "UNKNOWN RISK: Unmonitored port traffic."
+
+        print("\nFIREWALL LOG:")
+        print(f"Port: {port}, Transfer Size: {size} MB")
+        print(f"Risk Assessment: {risk}")
+        
+    except (ValueError, EOFError):
+        pass
+
+if __name__ == "__main__":
+    analyze_traffic()
 
 
 
