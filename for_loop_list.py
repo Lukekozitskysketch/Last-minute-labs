@@ -1,8 +1,8 @@
 # FILE NAME - for_loop_list.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  List that provide for a certain scenario selection
 
 
 
@@ -20,11 +20,28 @@
     # walk through that list. Output every item in the list. The 
     # work of creating the list has already been done for you.
     
-    dog_names = ["Quinnie", "Yogi", "Maggie", "BB-8", "done"]
+scenarios = [
+    {
+        "prompts": 4,
+        "dogs": ["a", "b", "c"]
+    },
+    {
+        "prompts": 6,
+        "dogs": ["Quinnie", "Yogi", "Maggie", "BB-8", "done"]
+    },
+    {
+        "prompts": 1,
+        "dogs": []
+    }
+]
 
-for dog in dog_names:
-    print(f"{dog} is awesome.")
-
+for scenario in scenarios:
+    for _ in range(scenario["prompts"]):
+        print("Name of doggo: ")
+    print()
+    for dog in scenario["dogs"]:
+        print(f"{dog} is awesome.")
+    print()
     
 
     ########### END YER CODE ABOVE THIS LINE ###########
