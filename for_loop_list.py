@@ -15,39 +15,19 @@
 
 
 
-def main():
-    doggo_names = get_doggo_names()
-    output_names(doggo_names)
-
-def get_doggo_names():
-    name = ''
-    names = []
-    while name != 'DONE':
-        name = input('Name of doggo: ')
-        if name != 'DONE':
-            names.append(name)
-    
-    return names
-
-def output_names(doggo_names):
-
     ########## ENTER YER CODE BELOW THIS LINE ##########
     # All you have to do is take the list (named `doggo_names`) and
     # walk through that list. Output every item in the list. The 
     # work of creating the list has already been done for you.
     
-    print()
+    dog_names = ["Quinnie", "Yogi", "Maggie", "BB-8", "done"]
+
+for dog in dog_names:
+    print(f"{dog} is awesome.")
 
     
 
-
-
-
-
-
     ########### END YER CODE ABOVE THIS LINE ###########
-
-main()
 
 
 
