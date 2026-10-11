@@ -1,9 +1,9 @@
 # FILE NAME - for_loop_start_end_increment.py
 
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  Loop statements with starting and ending increments
 
 
 
@@ -19,12 +19,10 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-
-
-
-
-
-
+start = int(input("Starting point: "))
+end = int(input("Ending point: "))
+step = int(input("Increment by: "))
+print(*(range(start, end, step)))
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
