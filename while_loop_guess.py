@@ -1,8 +1,8 @@
 # FILE NAME - while_loop_guess.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  Guess a number statement in python
 
 
 
@@ -18,12 +18,12 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+scenarios = [3, 6, 1]
 
-
-
-
-
-
+for tries in scenarios:
+    for _ in range(tries):
+        print("Guess a number: ")
+    print(f"You guessed in {tries} tries.")
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
