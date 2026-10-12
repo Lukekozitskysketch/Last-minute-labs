@@ -17,17 +17,17 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
-correct_password = "my_secret_password"
+correct_password = "tooManySecrets"
 
 while True:
-    user_input = input("enter password: ")
+    user_input = input("Enter password: ")
+    print()
     
     if user_input == correct_password:
-        print("accessgranted.")
+        print("Access granted.")
         break
     else:
-        print("password does not match.")
-
+        print("Password does not match.\n")
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
