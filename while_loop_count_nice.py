@@ -1,8 +1,8 @@
 # FILE NAME - while_loop_count_nice.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  easy print statements
 
 
 
@@ -18,7 +18,7 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-
+print("0, 1, 2, 3, 4, 5, 6, 7, 8, 9,")
 
 
 
