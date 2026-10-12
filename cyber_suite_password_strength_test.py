@@ -24,7 +24,8 @@ def main():
     print("This tool analyzes your password and rates its strength.\n")
     
     try:
-        password = input("Enter a password to check: ")
+        raw_password = input("Enter a password to check: ")
+        password = raw_password.strip()
     except (EOFError, RuntimeError):
         sys.exit(0)
         
