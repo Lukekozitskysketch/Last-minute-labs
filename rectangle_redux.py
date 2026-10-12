@@ -18,16 +18,12 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+height = int(input("How tall would you like the rectangle? \n"))
 
-
-height = int(input("How tall would you like the rectangle? "))
-
-if height >= 1:
-    print("*****")
-    for _ in range(height - 2):
-        print("*   *")
-    if height > 1:
-        print("*****")
+print("*****")
+for _ in range(height):
+    print("*   *")
+print("*****")
 
 
 
