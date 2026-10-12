@@ -1,6 +1,6 @@
 # FILE NAME - authenticate.py
 
-# NAME: 
+# NAME: Luke Kozitsky
 # DATE: 
 # BRIEF DESCRIPTION:  
 
@@ -18,12 +18,16 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+correct_password = "my_secret_password"
 
-
-
-
-
-
+while True:
+    user_input = input("Enter password: ")
+    
+    if user_input == correct_password:
+        print("Access granted.")
+        break
+    else:
+        print("Password does not match.\n")
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
