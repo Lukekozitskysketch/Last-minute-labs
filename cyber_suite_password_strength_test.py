@@ -28,7 +28,8 @@ def main():
     except (EOFError, RuntimeError):
         sys.exit(0)
         
-    print("\n===== PASSWORD ANALYSIS =====")
+    print()
+    print("===== PASSWORD ANALYSIS =====")
     
     length = len(password)
     upper = sum(1 for c in password if c.isupper())
