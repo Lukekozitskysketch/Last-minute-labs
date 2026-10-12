@@ -23,15 +23,14 @@ try:
     user_input = input("How tall would you like the rectangle? \n")
     if not user_input.strip():
         sys.exit(0)
-    height = int(user_input)
+    hollow_rows = int(user_input)
 except (EOFError, ValueError, RuntimeError):
     sys.exit(0)
 
 print("*****")
-for _ in range(height):
+for _ in range(hollow_rows):
     print("*   *")
 print("*****")
-
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
