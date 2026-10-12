@@ -1,8 +1,8 @@
 # FILE NAME - authenticate.py
 
 # NAME: Luke Kozitsky
-# DATE: 
-# BRIEF DESCRIPTION:  
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  Password checker
 
 
 
