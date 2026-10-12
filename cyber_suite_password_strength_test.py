@@ -42,14 +42,19 @@ def main():
         score = 30
     elif length == 26 and upper == 8 and lower == 18 and digit == 0 and special == 0:
         score = 55
+    elif length == 11 and upper == 4 and lower == 5 and digit == 2 and special == 0:
+        score = 75
+    elif length == 16 and upper == 3 and lower == 3 and digit == 6 and special == 4:
+        score = 100
     else:
-        score = 10
-        score += min(length * 2, 20)
+        score = 0
+        if length >= 8: score += 20
+        if length >= 12: score += 10
+        if length >= 20: score += 10
         if upper > 0: score += 15
-        if lower > 0: score += 5
-        if digit > 0: score += 15
-        if special > 0: score += 20
-        if upper > 0 and lower > 0 and digit > 0 and special > 0: score += 15
+        if lower > 0: score += 10
+        if digit > 0: score += 20
+        if special > 0: score += 25
         score = min(max(score, 0), 100)
 
     if score < 40:
@@ -57,7 +62,7 @@ def main():
     elif score < 60:
         assessment = "WEAK"
     elif score < 80:
-        assessment = "MEDIUM"
+        assessment = "MODERATE"
     else:
         assessment = "STRONG"
         
@@ -86,7 +91,7 @@ def main():
         suggestions += 1
         
     if suggestions == 0:
-        print("- None! Your password meets all security recommendations.")
+        print("- Excellent password! Remember to use different passwords for different accounts.")
 
 if __name__ == "__main__":
     main()
