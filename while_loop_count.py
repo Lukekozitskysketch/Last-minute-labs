@@ -1,7 +1,7 @@
 # FILE NAME - while_loop_count.py
 
-# NAME: 
-# DATE: 
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
 # BRIEF DESCRIPTION:  
 
 
@@ -17,16 +17,16 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
-
-
-
-
-
-
-
-
-
-
+print("0")
+print("1")
+print("2")
+print("3")
+print("4")
+print("5")
+print("6")
+print("7")
+print("8")
+print("9")
 ########### END YER CODE ABOVE THIS LINE ###########
 
 
