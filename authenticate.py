@@ -20,14 +20,13 @@
 correct_password = "my_secret_password"
 
 while True:
-    user_input = input("Enter password: ")
-    print()
+    user_input = input("enter password: ")
     
     if user_input == correct_password:
-        print("Access granted.")
+        print("accessgranted.")
         break
     else:
-        print("Password does not match.")
+        print("password does not match.")
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
