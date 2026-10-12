@@ -21,7 +21,11 @@
 correct_password = "my_secret_password"
 
 while True:
-    user_input = input("Enter password: ")
+    try:
+        user_input = input("Enter password: ")
+    except (EOFError, RuntimeError):
+        print("Error: This environment does not support terminal inputs.")
+        break
     
     if user_input == correct_password:
         print("Access granted.")
