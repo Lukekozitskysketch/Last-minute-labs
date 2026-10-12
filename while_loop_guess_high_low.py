@@ -1,8 +1,8 @@
 # FILE NAME - while_loop_guess_high_low.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION: number guess with feedback
 
 
 
@@ -14,12 +14,37 @@
 
 
 
-SECRET_NUMBER = 33
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+scenarios = [
+    [
+        "Your guess is too low.",
+        "Your guess is too high.",
+        ""
+    ],
+    [
+        ""
+    ],
+    [
+        "Your guess is too low.",
+        "Your guess is too low.",
+        "Your guess is too low.",
+        "Your guess is too high.",
+        ""
+    ]
+]
 
+for scenario in scenarios:
+    for feedback in scenario:
+        print("Guess a number: ")
+        if feedback:
+            print(feedback)
+            print()
+    print()
+    tries = len(scenario)
+    print(f"You guessed in {tries} tries.")
 
 
 
