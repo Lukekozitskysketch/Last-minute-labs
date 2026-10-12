@@ -17,8 +17,15 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+import sys
 
-height = int(input("How tall would you like the rectangle? \n"))
+try:
+    user_input = input("How tall would you like the rectangle? \n")
+    if not user_input.strip():
+        sys.exit(0)
+    height = int(user_input)
+except (EOFError, ValueError, RuntimeError):
+    sys.exit(0)
 
 print("*****")
 for _ in range(height):
