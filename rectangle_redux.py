@@ -22,7 +22,7 @@
 
 height = int(input("How tall would you like the rectangle? "))
 
-if height > 0:
+if height >= 1:
     print("*****")
     for _ in range(height - 2):
         print("*   *")
