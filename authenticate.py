@@ -17,21 +17,25 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+import sys
 
-correct_password = "my_secret_password"
-
-while True:
-    try:
-        user_input = input("Enter password: ")
-    except (EOFError, RuntimeError):
-        print("Error: This environment does not support terminal inputs.")
-        break
+def check_password():
+    correct_password = "my_secret_password"
     
-    if user_input == correct_password:
-        print("Access granted.")
-        break
-    else:
-        print("Password does not match.\n")
+    while True:
+        try:
+            user_input = input("Enter password: ")
+        except (EOFError, RuntimeError, KeyboardInterrupt):
+            sys.exit(0)
+            
+        if user_input == correct_password:
+            print("Access granted.")
+            sys.exit(0)
+        else:
+            print("Password does not match.\n")
+
+if __name__ == "__main__":
+    check_password()
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
