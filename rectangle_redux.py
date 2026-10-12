@@ -1,8 +1,8 @@
 # FILE NAME - rectangle_redux.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-11-26
+# BRIEF DESCRIPTION:  Rectangle size creater
 
 
 
@@ -20,10 +20,14 @@
 
 
 
+height = int(input("How tall would you like the rectangle? "))
 
-
-
-
+if height > 0:
+    print("*****")
+    for _ in range(height - 2):
+        print("*   *")
+    if height > 1:
+        print("*****")
 
 
 
