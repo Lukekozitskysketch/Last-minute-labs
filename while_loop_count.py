@@ -2,7 +2,7 @@
 
 # NAME: Luke Kozitsky
 # DATE: 10-11-26
-# BRIEF DESCRIPTION:  
+# BRIEF DESCRIPTION: simple printing statements
 
 
 
