@@ -52,14 +52,13 @@ while True:
         break
     names.append(name)
 
-print()
 print("ORIGINAL -", names)
 
-names.sort()
-print("SORTED -", names)
+sorted_names = sorted(names)
+print("SORTED -", sorted_names)
 
-names.reverse()
-print("REVERSED -", names)
+reversed_names = names[::-1]
+print("REVERSED -", reversed_names)
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
