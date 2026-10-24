@@ -1,8 +1,8 @@
 # FILE NAME - output_values.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-24-26
+# BRIEF DESCRIPTION:  input output python lists
 
 
 
@@ -16,17 +16,12 @@
 
 # Create an empty list
 
-numbers =[]
 
 
 
 # Walk through the list and grab a number from the
 # user. Insert that number into the next available cell
 
-for x in range(5):
-    numbers.append(int(input('Enter a number: ')))
-
-print()
 
 
 #########################################
@@ -40,15 +35,19 @@ print()
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+numbers = []
+for _ in range(5):
+    num = int(input("Enter a number: "))
+    numbers.append(num)
 
 # Sort the list
-
+numbers.sort()
 
 # Print out the list naturally:
-
+print(numbers)
 
 # Print out the list in a pretty way:
-
+print("Your numbers are:", "  ".join(map(str, numbers)))
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
@@ -106,7 +105,7 @@ Your numbers are: -1  0  0  0  1
 1. What is one lesson you learned in this lab?
 
 
-
+I learned what lists are
 
 
 
@@ -126,7 +125,7 @@ of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
 [ ] I wrote the initial draft of the software but had AI help me make it better.
-[ ] I fed the lab description to AI and had it generate a response but I modified it.
+[X] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
 
 
@@ -137,7 +136,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
