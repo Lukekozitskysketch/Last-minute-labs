@@ -1,8 +1,8 @@
 # FILE NAME - sort_values_and_output.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-24-26
+# BRIEF DESCRIPTION:  Sorting values and then printing them
 
 
 
