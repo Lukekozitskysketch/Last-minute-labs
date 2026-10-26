@@ -143,7 +143,7 @@ DOUBLED -           [-1046, -108, 0, 4, 386, 530, 590, 926, 1148]
 
 
 
-
+by only doubling if it meets a certian cryteria
 
 
 
