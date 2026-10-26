@@ -18,7 +18,7 @@
 ########## ENTER YER CODE BELOW THIS LINE ##########
 import random
 
-seed_input = input("ENTER SEED FOR SIMULATION: ")
+seed_input = input("ENTER SEED FOR SIMULATION:\n")
 random.seed(int(seed_input))
 
 print("\n===============================")
@@ -36,15 +36,17 @@ print("     SIMULATING CODE USE       ")
 print("===============================\n")
 
 print(f"You have {len(backup_codes)} codes remaining.")
-entered_code = input("Enter a valid code: ")
+entered_code = input("Enter a valid code:\n")
 print()
 
 if int(entered_code) in backup_codes:
-    print("Access Granted")
+    print("Access Granted\n")
+    backup_codes.remove(int(entered_code))
+    print(f"You have {len(backup_codes)} codes remaining.\n")
+    for code in backup_codes:
+        print(f"Backup code: {code}")
 else:
     print("Access Denied")
-
-
 
 
 
