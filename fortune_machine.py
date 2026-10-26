@@ -1,8 +1,8 @@
 # FILE NAME - fortune_machine.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  Fortune machine
 
 
 
@@ -12,7 +12,6 @@
 # 4. The Sample Output has been included in this code for your convenience
 
 
-import random
 
 #########################################
 #               YOUR JOB:               #
@@ -30,7 +29,42 @@ import random
 #########################################
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+import random
 
+def get_fortunes():
+    fortunes = []
+    print("Enter some fortunes. Type \"DONE\" when you are through.")
+    while True:
+        entry = input("Enter a fortune: ")
+        if entry.strip() == "DONE":
+            break
+        fortunes.append(entry)
+    return fortunes
+
+print("=======================================")
+print("Welcome to the Fortune Telling Machine!")
+print("=======================================")
+print()
+print()
+
+fortune_list = get_fortunes()
+print()
+
+if fortune_list:
+    print(random.choice(fortune_list))
+    print()
+    
+    while True:
+        again = input("Another fortune (y/n)? ")
+        if again.strip().lower() == 'n':
+            break
+        print(random.choice(fortune_list))
+        print()
+
+print()
+print()
+print("Thank you for using the Fortune Telling Machine!")
+print("Smash that LIKE and Subscribe button and tell your friends!")
 
 
 
