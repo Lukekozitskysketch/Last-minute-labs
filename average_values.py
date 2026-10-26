@@ -1,29 +1,25 @@
 # FILE NAME - average_values.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION: 
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION: Average values 
 
 
 
 
 # Declare the list called `numbers`
-numbers = []
+
 
 # Keep running through this `while` loop forever
-while True:
+
 
     # Prompt the user for a number (or "DONE" when finished)
-    user_input = input('Enter a number ("DONE" to finish): ')
+ 
     
     # If the input is "DONE", break out of the `while`` loop
-    if user_input == 'DONE':
-        print('\n---END OF INPUT---\n')
-        break
-    else:
+
         # Otherwise, convert the input to an `int` and append
         # it to the list called `numbers`
-        numbers.append(int(user_input))
 
 #########################################
 #               YOUR JOB:               #
@@ -39,7 +35,22 @@ while True:
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
+numbers = []
 
+while True:
+    user_input = input('Enter a number ("DONE" to finish): ')
+    
+    if user_input.strip().upper() == "DONE":
+        break
+        
+    try:
+        num = float(user_input)
+        numbers.append(num)
+    except ValueError:
+        pass
+
+print("\n---END OF INPUT---")
+print(f"NUMBERS = {numbers}")
 
 
 
