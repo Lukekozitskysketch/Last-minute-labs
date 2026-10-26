@@ -37,6 +37,27 @@
 numbers = []
 
 while True:
+    user_input = input('Enter a number ("DONE" to finish): \n')
+    
+    if user_input.strip().upper() == "DONE":
+        break
+        
+    try:
+        num = int(user_input)
+        numbers.append(num)
+    except ValueError:
+        pass
+
+print("\n---END OF INPUT---")
+print(f"NUMBERS =  {numbers}")
+
+if numbers:
+    total_sum = sum(numbers)
+    average = total_sum / len(numbers)
+    print(f"SUM = {total_sum}")
+    print(f"AVERAGE =  {average}")numbers = []
+
+while True:
     user_input = input('Enter a number ("DONE" to finish): ')
     
     if user_input.strip().upper() == "DONE":
