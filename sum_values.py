@@ -1,8 +1,8 @@
 # FILE NAME - sum_values.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  Login attempts danger detector
 
 
 
@@ -27,7 +27,32 @@
 #########################################
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+print("Please enter failed login attempts")
+print("==================================")
+print()
 
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+attempts = []
+
+for day in days:
+    val = int(input(f"  {day}:    \n"))
+    attempts.append(val)
+
+total = sum(attempts)
+
+print()
+print()
+print("===== FAILED LOGIN ATTEMPTS ANALYZER =====")
+print()
+print(f"Total failed login attempts for the week: {total}")
+print()
+
+if total > 100:
+    print("SECURITY ALERT: Weekly threshold of 100 attempts has been exceeded!")
+    print("Recommendation: Investigate for potential brute force attacks.")
+else:
+    print("Everything seems normal. It's quiet. Too quiet.")
+    print("Recommendation: Continue routine monitoring.")
 
 
 
@@ -95,7 +120,7 @@ Recommendation: Investigate for potential brute force attacks.
 1. How did you sum the element in the list?
 
 
-
+with python code
 
 
 
@@ -115,7 +140,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
