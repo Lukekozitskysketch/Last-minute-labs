@@ -188,7 +188,7 @@ Backup code: 921872
 
 1. This program had multiple steps - what was the hardest for you?
 
-
+Piecing it all together without mixing code up 
 
 
 
@@ -208,7 +208,7 @@ those concepts are required understanding for entry level programming. Reliance 
 like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Google results
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
-[ ] I understand very little about this lab.
+[X] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
