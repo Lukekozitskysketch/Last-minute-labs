@@ -66,14 +66,6 @@ print()
 print("Thank you for using the Fortune Telling Machine!")
 print("Smash that LIKE and Subscribe button and tell your friends!")
 
-
-
-
-
-
-
-
-
 ########### END YER CODE ABOVE THIS LINE ###########
 
 
@@ -213,7 +205,7 @@ Smash that LIKE and Subscribe button and tell your friends!
    that were challenging for you?
 
 
-
+Having the type done thing that was hard
 
 
 
@@ -233,7 +225,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
