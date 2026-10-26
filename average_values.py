@@ -36,8 +36,7 @@
 numbers = []
 
 while True:
-    user_input = input('Enter a number ("DONE" to finish): ')
-    print()
+    user_input = input('Enter a number ("DONE" to finish): \n')
     
     if user_input.strip().upper() == "DONE":
         break
@@ -48,7 +47,7 @@ while True:
     except ValueError:
         pass
 
-print("---END OF INPUT---")
+print("\n---END OF INPUT---")
 print(f"NUMBERS =  {numbers}")
 
 if numbers:
