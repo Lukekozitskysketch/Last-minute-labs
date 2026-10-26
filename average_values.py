@@ -36,7 +36,8 @@
 numbers = []
 
 while True:
-    user_input = input('Enter a number ("DONE" to finish): \n')
+    user_input = input('Enter a number ("DONE" to finish): ')
+    print()
     
     if user_input.strip().upper() == "DONE":
         break
@@ -47,7 +48,7 @@ while True:
     except ValueError:
         pass
 
-print("\n---END OF INPUT---")
+print("---END OF INPUT---")
 print(f"NUMBERS =  {numbers}")
 
 if numbers:
@@ -55,7 +56,6 @@ if numbers:
     average = float(total_sum) / len(numbers)
     print(f"SUM = {total_sum}")
     print(f"AVERAGE =  {average}")
-
 ########### END YER CODE ABOVE THIS LINE ###########
 
 
