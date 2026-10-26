@@ -26,7 +26,8 @@ random.seed(int(seed_input))
 
 print("===============================")
 print("  SIMULATING CODE GENERATION   ")
-print("===============================\n")
+print("===============================")
+print()
 
 backup_codes = []
 for _ in range(10):
@@ -34,9 +35,11 @@ for _ in range(10):
     backup_codes.append(code)
     print(f"Backup code: {code}")
 
-print("\n===============================")
+print()
+print("===============================")
 print("     SIMULATING CODE USE       ")
-print("===============================\n")
+print("===============================")
+print()
 
 print(f"You have {len(backup_codes)} codes remaining.")
 print("Enter a valid code: ")
@@ -53,8 +56,6 @@ if int(entered_code) in backup_codes:
         print(f"Backup code: {code}")
 else:
     print("Access Denied")
-
-
 ########### END YER CODE ABOVE THIS LINE ###########
 
 
