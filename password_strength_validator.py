@@ -1,8 +1,8 @@
 # FILE NAME - password_strength_analyzer.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  Password strength tester
 
 
 
@@ -12,13 +12,82 @@
 # 4. The Sample Output has been included in this code for your convenience
 
 
-import random
+
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
+import string
 
+print("Enter your password: ")
+password = input()
+print()
+
+length = len(password)
+upper_count = sum(1 for c in password if c.isupper())
+lower_count = sum(1 for c in password if c.islower())
+num_count = sum(1 for c in password if c.isdigit())
+special_count = sum(1 for c in password if c in string.punctuation)
+
+if length >= 15:
+    len_pts = 8
+elif length >= 11:
+    len_pts = 5
+elif length >= 8:
+    len_pts = 2
+else:
+    len_pts = 0
+
+if upper_count >= 5:
+    upper_pts = 8
+elif upper_count >= 2:
+    upper_pts = 4
+elif upper_count >= 1:
+    upper_pts = 2
+else:
+    upper_pts = 0
+
+if lower_count >= 5:
+    lower_pts = 8
+elif lower_count >= 2:
+    lower_pts = 4
+elif lower_count >= 1:
+    lower_pts = 2
+else:
+    lower_pts = 0
+
+if num_count >= 5:
+    num_pts = 8
+elif num_count >= 2:
+    num_pts = 4
+elif num_count >= 1:
+    num_pts = 2
+else:
+    num_pts = 0
+
+if special_count >= 3:
+    special_pts = 8
+elif special_count >= 2:
+    special_pts = 4
+elif special_count >= 1:
+    special_pts = 2
+else:
+    special_pts = 0
+
+total_score = (len_pts + upper_pts + lower_pts + num_pts + special_pts) / 40.0
+strength_pct = total_score * 100
+
+print("Password Analysis Report")
+print("-------------------------")
+print(f"LENGTH: {len_pts} points ({length} characters)")
+print(f"UPPERCASE: {upper_pts} points ({upper_count} uppercase letter(s))")
+print(f"LOWERCASE: {lower_pts} points ({lower_count} lowercase letter(s))")
+print(f"NUMBERS: {num_pts} points ({num_count} number(s))")
+print(f"SPECIAL CHARACTERS: {special_pts} points ({special_count} special character(s))")
+print()
+print(f"Total Score: {round(total_score, 3)}")
+print(f"Strength Percentage: {strength_pct:.1f}%")
 
 
 
@@ -127,10 +196,9 @@ Strength Percentage: 100.0%
    that were challenging for you?
 
 
-
-
-
-
+It's size
+All the complex code
+I have trouble taking the jupiter notebook and applying it to this lab
 
 '''
 
