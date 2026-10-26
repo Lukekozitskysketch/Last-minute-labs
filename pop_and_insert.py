@@ -15,26 +15,24 @@
 
 
 # Declare an array called `customers`.
-customers = []
+
 
 # Declare a variable called `driver_name` and set it equal to ''.
-driver_name = ''
+
 
 # Collect information from the user. The user can keep entering 
 # names of drivers as they enter the DMV. Once the last driver
 # is loaded into the list, the DMV employee will type 'EOF' 
 # (which in computer nerdom translates to "End of File").
-while driver_name != 'EOF':
-    driver_name = input('Enter the name of the customer: ')
+
 
     # Need to ensure that "EOF" is not input into the system as a name!
-    if driver_name != 'EOF':
-        customers.append(driver_name)
 
-print()
+
+
 
 # Output the names
-print(customers)
+
 
 
 
@@ -49,7 +47,25 @@ print(customers)
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
+def manage_customer_list():
+    customers = []
+    
+    while True:
+        name = input("Enter the name of the customer: ")
+        if name == "EOF":
+            break
+        customers.append(name)
+    
+    print()
+    print(customers)
+    
+    if customers:
+        shifted_customers = customers[1:] + [customers[0]]
+        print(shifted_customers)
+    else:
+        print([])
 
+manage_customer_list()
 
 
 
@@ -107,7 +123,7 @@ Enter the name of the customer: EOF
 
 1. How did you move the element in the list?
 
-
+slicing everything from the second item onward and making a new list containing just the first item at the  end.
 
 
 
@@ -128,7 +144,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
