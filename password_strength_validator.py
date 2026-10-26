@@ -83,7 +83,7 @@ print(f"LOWERCASE: {lower_pts} points ({lower_count} lowercase letter(s))")
 print(f"NUMBERS: {num_pts} points ({num_count} number(s))")
 print(f"SPECIAL CHARACTERS: {special_pts} points ({special_count} special character(s))")
 print()
-print(f"Total Score: {round(total_score, 3)}")
+print(f"Total Score: {total_score:.3g}")
 print(f"Strength Percentage: {strength_pct:.1f}%")
 
 
