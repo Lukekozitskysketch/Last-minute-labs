@@ -206,8 +206,8 @@ Smash that LIKE and Subscribe button and tell your friends!
 
 
 Having the type done thing that was hard
-
-
+This code was very long and i felt i didn't understand what everything was doing
+I think there should be a lesson on piecing all the chapters together
 
 
 '''
