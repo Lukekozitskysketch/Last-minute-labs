@@ -1,8 +1,8 @@
 # FILE NAME - sort_values_and_output.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke the man Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  Values sorted 
 
 
 
@@ -43,19 +43,25 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-hile True:
-    user_input = input('Enter a name (enter "_DONE_" to end): ')
-    if user_input == "_DONE_":
-        break
-    names.append(user_input)
+def main():
+    names = []
+    
+    while True:
+        user_input = input('Enter a name (enter "_DONE_" to end): ')
+        if user_input == "_DONE_":
+            break
+        names.append(user_input)
+        
+    print(f"\nORIGINAL - {names}")
+    
+    sorted_names = sorted(names)
+    print(f"SORTED - {sorted_names}")
+    
+    reversed_names = sorted_names[::-1]
+    print(f"REVERSED - {reversed_names}")
 
-original_list = names.copy()
-sorted_list = sorted(names)
-reversed_list = list(reversed(sorted_list))
-
-print(f"\nORIGINAL - {original_list}")
-print(f"SORTED - {sorted_list}")
-print(f"REVERSED - {reversed_list}")
+if __name__ == "__main__":
+    main()
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -144,7 +150,7 @@ REVERSED - ['foxtrot', 'delta', 'alpha', 'ECHO', 'CHARLIE', 'BRAVO']
 1. What is one lesson you learned in this lab?
 
 
-
+I got better at sorting and then giving an output 
 
 
 
@@ -165,7 +171,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
