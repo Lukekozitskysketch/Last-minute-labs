@@ -1,8 +1,8 @@
 # FILE NAME - mfa_simulator.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  code generation sim
 
 
 
@@ -12,11 +12,37 @@
 # 4. The Sample Output has been included in this code for your convenience
 
 
-import random
+
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+import random
 
+seed_input = input("ENTER SEED FOR SIMULATION: ")
+random.seed(int(seed_input))
+
+print("\n===============================")
+print("  SIMULATING CODE GENERATION   ")
+print("===============================\n")
+
+backup_codes = []
+for _ in range(10):
+    code = random.randint(100000, 999999)
+    backup_codes.append(code)
+    print(f"Backup code: {code}")
+
+print("\n===============================")
+print("     SIMULATING CODE USE       ")
+print("===============================\n")
+
+print(f"You have {len(backup_codes)} codes remaining.")
+entered_code = input("Enter a valid code: ")
+print()
+
+if int(entered_code) in backup_codes:
+    print("Access Granted")
+else:
+    print("Access Denied")
 
 
 
