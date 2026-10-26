@@ -1,6 +1,6 @@
 # FILE NAME - sort_values_and_output.py
 
-# NAME: Luke the man Kozitsky
+# NAME: Luke Kozitsky
 # DATE: 10-26-26
 # BRIEF DESCRIPTION:  Values sorted 
 
