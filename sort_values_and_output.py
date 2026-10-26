@@ -1,8 +1,8 @@
 # FILE NAME - sort_values_and_output.py
 
-# NAME: Luke Kozitsky
-# DATE: 10-24-26
-# BRIEF DESCRIPTION:  Sorting values and then printing them
+# NAME: 
+# DATE: 
+# BRIEF DESCRIPTION:  
 
 
 
@@ -16,17 +16,23 @@
 
 
 # Declare the variable 'name' and give it a value of NONE
-
+name = None
 
 # Declare the list 'names' but keep it empty
-
+names = []
 
 # Here we populate the list. We will keep appending input from the user
 # to the list unless the input is '_DONE_'. Note the tricky part - we 
 # have to make sure we don't append '_DONE_' to the list!
+while (name != '_DONE_'):
+    name = input('Enter a name (enter "_DONE_" to end): ')
+    if name == '_DONE_':
+        break
+    else:
+        names.append(name)
 
 # Empty line for visual break
-
+print()
 
 #########################################
 #               YOUR JOB:               #
@@ -44,21 +50,12 @@
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
-names = []
 
-while True:
-    name = input('Enter a name (enter "_DONE_" to end): ')
-    if name == "_DONE_":
-        break
-    names.append(name)
 
-print("ORIGINAL -", names)
 
-sorted_names = sorted(names)
-print("SORTED -", sorted_names)
 
-reversed_names = names[::-1]
-print("REVERSED -", reversed_names)
+
+
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
@@ -148,7 +145,7 @@ REVERSED - ['foxtrot', 'delta', 'alpha', 'ECHO', 'CHARLIE', 'BRAVO']
 1. What is one lesson you learned in this lab?
 
 
-I learned to switch output values and then print them 
+
 
 
 
@@ -169,7 +166,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
