@@ -1,8 +1,8 @@
 # FILE NAME - pop_and_insert.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION:  cut and re insert code
 
 
 
