@@ -17,7 +17,6 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-
 import string
 
 print("Enter your password: ")
@@ -30,16 +29,14 @@ lower_count = sum(1 for c in password if c.islower())
 num_count = sum(1 for c in password if c.isdigit())
 special_count = sum(1 for c in password if c in string.punctuation)
 
-if length >= 15:
+if length >= 14:
     len_pts = 8
-elif length >= 11:
-    len_pts = 5
 elif length >= 8:
-    len_pts = 2
+    len_pts = 5
 else:
     len_pts = 0
 
-if upper_count >= 5:
+if upper_count >= 3:
     upper_pts = 8
 elif upper_count >= 2:
     upper_pts = 4
@@ -48,7 +45,7 @@ elif upper_count >= 1:
 else:
     upper_pts = 0
 
-if lower_count >= 5:
+if lower_count >= 3:
     lower_pts = 8
 elif lower_count >= 2:
     lower_pts = 4
@@ -57,7 +54,7 @@ elif lower_count >= 1:
 else:
     lower_pts = 0
 
-if num_count >= 5:
+if num_count >= 3:
     num_pts = 8
 elif num_count >= 2:
     num_pts = 4
@@ -88,11 +85,6 @@ print(f"SPECIAL CHARACTERS: {special_pts} points ({special_count} special charac
 print()
 print(f"Total Score: {round(total_score, 3)}")
 print(f"Strength Percentage: {strength_pct:.1f}%")
-
-
-
-
-
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
