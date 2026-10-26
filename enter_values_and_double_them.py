@@ -1,33 +1,29 @@
 # FILE NAME - double_values.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION: 
+# NAME: Luke Kozitsky
+# DATE: 10-26-26
+# BRIEF DESCRIPTION: Code on doubling python values
 
    
 
 
 # First, let's figure out how many numbers the user will be entering:
-size = int(input('How many numbers will you be entering? '))
+
 
 # Next let's make a list. It's OK if the list doesn't have a length
 # yet as we will just be appending to it.
-numbers = []
-double_numbers = []
 
 # Guess we'll need a loop to populate the loop:
-while len(numbers) < size:
 
     # Here's the tricky part. Stay with me! We have to ask the user to
     # input a number using the `input` function. Then we have to cast
     # it to an `int` before we append it. Otherwise, the list `numbers`
     # will be full of `strings`!
-    num = int(input('What is number? '))
-    numbers.append(num)
+ 
 
 
 # Empty line for visual break
-print()
+
 
 ##########################################
 #               YOUR JOB:                #
@@ -45,7 +41,33 @@ print()
 # HINT: It might be easier to create a second list
 
 
+def main():
+    try:
+        count = int(input("How many numbers will you be entering? "))
+    except ValueError:
+        return
 
+    original = []
+    for _ in range(count):
+        while True:
+            try:
+                num = int(input("What is number? "))
+                original.append(num)
+                break
+            except ValueError:
+                pass
+
+    original_sorted = sorted(original)
+    doubled = [num * 2 for num in original_sorted]
+
+    print()
+    print(f"ORIGINAL -          {original}")
+    print(f"ORIGINAL (sorted) - {original_sorted}")
+    print(f"DOUBLED -           {doubled}")
+
+
+if __name__ == "__main__":
+    main()
 
 
 
@@ -142,7 +164,7 @@ like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Go
 may impede your understanding. Please rate how well you understand the concepts in this lab: 
 
 [ ] I understand very little about this lab.
-[ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
+[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
