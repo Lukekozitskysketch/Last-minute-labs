@@ -34,7 +34,6 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-
 numbers = []
 
 while True:
@@ -45,14 +44,20 @@ while True:
         
     try:
         num = float(user_input)
+        if num.is_integer():
+            num = int(num)
         numbers.append(num)
     except ValueError:
         pass
 
 print("\n---END OF INPUT---")
-print(f"NUMBERS = {numbers}")
+print(f"NUMBERS =  {numbers}")
 
-
+if numbers:
+    total_sum = sum(numbers)
+    average = total_sum / len(numbers)
+    print(f"SUM = {total_sum}")
+    print(f"AVERAGE =  {average}")
 
 
 
