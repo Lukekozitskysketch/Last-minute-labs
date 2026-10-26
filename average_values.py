@@ -33,7 +33,6 @@
 #########################################
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
-
 numbers = []
 
 while True:
@@ -53,36 +52,9 @@ print(f"NUMBERS =  {numbers}")
 
 if numbers:
     total_sum = sum(numbers)
-    average = total_sum / len(numbers)
-    print(f"SUM = {total_sum}")
-    print(f"AVERAGE =  {average}")numbers = []
-
-while True:
-    user_input = input('Enter a number ("DONE" to finish): ')
-    
-    if user_input.strip().upper() == "DONE":
-        break
-        
-    try:
-        num = float(user_input)
-        if num.is_integer():
-            num = int(num)
-        numbers.append(num)
-    except ValueError:
-        pass
-
-print("\n---END OF INPUT---")
-print(f"NUMBERS =  {numbers}")
-
-if numbers:
-    total_sum = sum(numbers)
-    average = total_sum / len(numbers)
+    average = float(total_sum) / len(numbers)
     print(f"SUM = {total_sum}")
     print(f"AVERAGE =  {average}")
-
-
-
-
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
