@@ -18,27 +18,27 @@ import fortune_util
 
 def main():
     while True:
-        fortune_until.get_directions()
-        fortune_until.dashes()
+        fortune_util.get_directions()
+        fortune_util.dashes()
         
         choice = input("Enter '1' for one fortune, 'M' for multiple fortunes, or 'Q' to quit: ").strip().upper()
         
         if choice == '1':
-            fortune_until.dashes()
+            fortune_util.dashes()
             print("ONE FORTUNE:")
-            fortune_until.get_one_fortune()
-            fortune_until.dashes()
-            fortune_until.quit()
+            fortune_util.get_one_fortune()
+            fortune_util.dashes()
+            fortune_util.quit()
         elif choice == 'M':
-            fortune_until.dashes()
+            fortune_util.dashes()
             print("MULTIPLE FORTUNES:")
             try:
                 num = int(input("How many fortunes would you like? "))
-                fortune_until.get_multiple_fortunes(num)
+                fortune_util.get_multiple_fortunes(num)
             except ValueError:
                 print("Please enter a valid number.")
-            fortune_until.dashes()
-            fortune_until.quit()
+            fortune_util.dashes()
+            fortune_util.quit()
         elif choice == 'Q':
             print("\nGoodbye!")
             break
