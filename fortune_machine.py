@@ -18,32 +18,30 @@ import fortune_util
 
 def main():
     while True:
-        fortune_util.get_directions()
-        fortune_util.dashes()
-        
-        choice = input("Enter '1' for one fortune, 'M' for multiple fortunes, or 'Q' to quit: ").strip().upper()
-        
-        if choice == '1':
+        try:
+            fortune_util.get_directions()
             fortune_util.dashes()
-            print("ONE FORTUNE:")
-            fortune_util.get_one_fortune()
-            fortune_util.dashes()
-            fortune_util.quit()
-        elif choice == 'M':
-            fortune_util.dashes()
-            print("MULTIPLE FORTUNES:")
-            try:
-                num = int(input("How many fortunes would you like? "))
+            
+            choice = input().strip().upper()
+            
+            if choice == '1':
+                print("ONE FORTUNE:")
+                fortune_util.get_one_fortune()
+                fortune_util.dashes()
+                fortune_util.quit()
+            elif choice == 'M':
+                print("MULTIPLE FORTUNES:")
+                num_str = input("How many fortunes would you like? ")
+                num = int(num_str)
                 fortune_util.get_multiple_fortunes(num)
-            except ValueError:
-                print("Please enter a valid number.")
-            fortune_util.dashes()
-            fortune_util.quit()
-        elif choice == 'Q':
-            print("\nGoodbye!")
+                fortune_util.dashes()
+                fortune_util.quit()
+            elif choice == 'Q':
+                break
+            else:
+                print("Invalid choice. Please try again.")
+        except EOFError:
             break
-        else:
-            print("\nInvalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
