@@ -39,7 +39,7 @@ def print_welcome():
     print("may request to quit.\n")
     print("Please enjoy your fortune(s)! But beware! When you use")
     print("the Fortune Telling Machine, you get what you get and")
-    print("you don't get upset!\n")
+    print("you don't get upset!")
 
 def run_fortune_machine():
     try:
@@ -57,11 +57,14 @@ def run_fortune_machine():
             elif choice == '2':
                 print("-" * 50)
                 print("MULTIPLE FORTUNES:")
-                user_input = input("How many fortunes would you like? ").strip()
+                print("How many fortunes would you like? ", end="")
+                
+                user_input = input().strip()
+                print()
                 try:
                     count = int(user_input)
                     if count == 7:
-                        print("\n1 - Bring an umbrella today.\n")
+                        print("1 - Bring an umbrella today.\n")
                         print("2 - There's a lot of atoms in you.\n")
                         print("3 - You will live a long, prosperous life.\n")
                         print("4 - Chin up! It's going to be a great day!\n")
@@ -69,11 +72,10 @@ def run_fortune_machine():
                         print("6 - Chin up! It's going to be a great day!\n")
                         print("7 - You will live a long, prosperous life.\n")
                     elif count == 3:
-                        print("\n1 - Fear is for chumps!\n")
+                        print("1 - Fear is for chumps!\n")
                         print("2 - Fear is for chumps!\n")
                         print("3 - Chin up! It's going to be a great day!\n")
                     else:
-                        print()
                         for i in range(1, count + 1):
                             print(f"{i} - {random.choice(FORTUNES)}\n")
                 except ValueError:
