@@ -1,8 +1,8 @@
 # FILE NAME - fortune_machine.py
 
-# NAME: Luke Kozitsky
-# DATE: 10-26-26
-# BRIEF DESCRIPTION:  Fortune machine
+# NAME: 
+# DATE: 
+# BRIEF DESCRIPTION:  
 
 
 
@@ -13,60 +13,15 @@
 
 
 
-#########################################
-#               YOUR JOB:               #
-#                                       #
-# 1. Provide a welcome message          #
-#                                       #
-# 2. Create a list and populate it with #
-#    the function "get_fortunes()"      #
-#                                       #
-# 3. Keep dispensing fortunes until the #
-#    user has had enough                #
-#                                       #
-# 4. Thank the user.                    #
-#                                       #
-#########################################
 
-########## ENTER YER CODE BELOW THIS LINE ##########
-import random
+import fortune_util
 
-def get_fortunes():
-    fortunes = []
-    print("Enter some fortunes. Type \"DONE\" when you are through.")
-    while True:
-        entry = input("Enter a fortune: ")
-        if entry.strip() == "DONE":
-            break
-        fortunes.append(entry)
-    return fortunes
+def main():
+    run_fortune_machine()
 
-print("=======================================")
-print("Welcome to the Fortune Telling Machine!")
-print("=======================================")
-print()
-print()
+def run_fortune_machine():
 
-fortune_list = get_fortunes()
-print()
-
-if fortune_list:
-    print(random.choice(fortune_list))
-    print()
-    
-    while True:
-        again = input("Another fortune (y/n)? ")
-        if again.strip().lower() == 'n':
-            break
-        print(random.choice(fortune_list))
-        print()
-
-print()
-print()
-print("Thank you for using the Fortune Telling Machine!")
-print("Smash that LIKE and Subscribe button and tell your friends!")
-
-########### END YER CODE ABOVE THIS LINE ###########
+    ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
 
@@ -74,6 +29,13 @@ print("Smash that LIKE and Subscribe button and tell your friends!")
 
 
 
+
+
+
+    ########### END YER CODE ABOVE THIS LINE ###########
+
+
+main()
 
 
 
@@ -82,118 +44,46 @@ print("Smash that LIKE and Subscribe button and tell your friends!")
 ########################################
 
 '''
-=======================================
-Welcome to the Fortune Telling Machine!
-=======================================
+
+--------------------------------------------------
+Welcome to the Fortune Telling Machine
+
+The instructions are simple - you may request one
+fortune, you  may request multiple fortunes, or you
+may request to quit.
+
+Please enjoy your fortune(s)! But beware! When you use
+the Fortune Telling Machine, you get what you get and
+you don't get upset!
+
+--------------------------------------------------
+ONE FORTUNE:
+There's a lot of atoms in you.
 
 
-Enter some fortunes. Type "DONE" when you are through.
-Enter a fortune: You will live a long life.
-Enter a fortune: You will be rich!
-Enter a fortune: You will eat the most delicious cookie later this week.
-Enter a fortune: You have a great smile.
-Enter a fortune: DONE
+--------------------------------------------------
+MULTIPLE FORTUNES:
+How many fortunes would you like? 7
 
-You will live a long life.
+1 - Bring an umbrella today.
 
-Another fortune (y/n)? y
-You will eat the most delicious cookie later this week.
+2 - There's a lot of atoms in you.
 
-Another fortune (y/n)? y
-You will live a long life.
+3 - You will live a long, prosperous life.
 
-Another fortune (y/n)? y
-You will be rich!
+4 - Chin up! It's going to be a great day!
 
-Another fortune (y/n)? y
-You will eat the most delicious cookie later this week.
+5 - If you have no pockets, your phone can't fall out of them!
 
-Another fortune (y/n)? y
-You will be rich!
+6 - Chin up! It's going to be a great day!
 
-Another fortune (y/n)? n
+7 - You will live a long, prosperous life.
 
+--------------------------------------------------
 
-Thank you for using the Fortune Telling Machine!
-Smash that LIKE and Subscribe button and tell your friends!
-'''
-
-
-'''
-=======================================
-Welcome to the Fortune Telling Machine!
-=======================================
-
-
-Enter some fortunes. Type "DONE" when you are through.
-Enter a fortune: a
-Enter a fortune: b
-Enter a fortune: c
-Enter a fortune: DONE
-
-c
-
-Another fortune (y/n)? y
-a
-
-Another fortune (y/n)? y
-a
-
-Another fortune (y/n)? y
-c
-
-Another fortune (y/n)? y
-c
-
-Another fortune (y/n)? y
-b
-
-Another fortune (y/n)? y
-b
-
-Another fortune (y/n)? n
-
-
-Thank you for using the Fortune Telling Machine!
-Smash that LIKE and Subscribe button and tell your friends!
-'''
-
+I hope you enjoyed your fortunes...
 
 '''
-=======================================
-Welcome to the Fortune Telling Machine!
-=======================================
-
-
-Enter some fortunes. Type "DONE" when you are through.
-Enter a fortune: You smell funny.
-Enter a fortune: You smell awesome!
-Enter a fortune: Watch out for falling ice cream.                  
-Enter a fortune: Enjoy your time in the fields of gold!
-Enter a fortune: This is the clock song.
-Enter a fortune: Cold comfort for change.
-Enter a fortune: DONE
-
-Cold comfort for change.
-
-Another fortune (y/n)? y
-Cold comfort for change.
-
-Another fortune (y/n)? y
-Enjoy your time in the fields of gold!
-
-Another fortune (y/n)? y
-This is the clock song.
-
-Another fortune (y/n)? n
-
-
-Thank you for using the Fortune Telling Machine!
-Smash that LIKE and Subscribe button and tell your friends!
-'''
-
-
-
 
 ########################################
 #          REFLECTION QUESTIONS
@@ -201,32 +91,20 @@ Smash that LIKE and Subscribe button and tell your friends!
 
 '''
 
-1. This is one of your first experiences with larger programs - what are three things
-   that were challenging for you?
+1. What was the hardest part of completing this lab? 
 
 
-Having the type done thing that was hard
-This code was very long and i felt i didn't understand what everything was doing
-I think there should be a lesson on piecing all the chapters together
+
+
+
+
+2. What value do you see in having external modules?
+
+
+
+
 
 
 '''
 
 
-
-########################################
-#            ATTESTATION
-########################################
-
-'''
-It is critical in this class that you understand the concepts as we explore them because
-those concepts are required understanding for entry level programming. Reliance on resources
-like AI and internet sites like Chegg, CourseHero, StackOverflow, and general Google results
-may impede your understanding. Please rate how well you understand the concepts in this lab: 
-
-[ ] I understand very little about this lab.
-[X] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
-[ ] I'm solid. Totally got it.
-
-'''
