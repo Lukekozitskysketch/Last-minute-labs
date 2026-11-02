@@ -6,45 +6,60 @@
 
 import random
 
-fortunes = [
-            'You will live a long, prosperous life.\n',
-            'Bring an umbrella today.\n',
-            'Fear is for chumps!\n',
-            'If you have no pockets, your phone can\'t fall out of them!\n',
-            'Yoda was wrong. "Trying" is a thing.\n',
-            'There\'s a lot of atoms in you.\n',
-            'Chin up! It\'s going to be a great day!\n'
-            ]
+FORTUNES = [
+    "There's a lot of atoms in you.",
+    "Bring an umbrella today.",
+    "You will live a long, prosperous life.",
+    "Chin up! It's going to be a great day!",
+    "If you have no pockets, your phone can't fall out of them!",
+    "Fear is for chumps!"
+]
 
-def get_directions():
-    print()
-    dashes()
-    print('Welcome to the Fortune Telling Machine')
-    print()
-    print('The instructions are simple - you may request one')
-    print('fortune, you  may request multiple fortunes, or you')
-    print('may request to quit.')
-    print()
-    print('Please enjoy your fortune(s)! But beware! When you use')
-    print('the Fortune Telling Machine, you get what you get and')
-    print('you don\'t get upset!')
-    print()
+def display_welcome():
+    print("-" * 50)
+    print("Welcome to the Fortune Telling Machine\n")
+    print("The instructions are simple - you may request one")
+    print("fortune, you may request multiple fortunes, or you")
+    print("may request to quit.\n")
+    print("Please enjoy your fortune(s)! But beware! When you use")
+    print("the Fortune Telling Machine, you get what you get and")
+    print("you don't get upset!")
+    print("-" * 50)
 
 def get_one_fortune():
-    print(random.choice(fortunes))
+    print("ONE FORTUNE:")
+    print(random.choice(FORTUNES))
     print()
 
-def get_multiple_fortunes(number_of_fortunes):
-    print()
-    for x in range(number_of_fortunes):
-        print((x + 1),'-',random.choice(fortunes))
+def get_multiple_fortunes():
+    print("MULTIPLE FORTUNES:")
+    try:
+        count = int(input("How many fortunes would you like? "))
+        print()
+        for i in range(1, count + 1):
+            print(f"{i} - {random.choice(FORTUNES)}\n")
+    except ValueError:
+        pass
 
-def dashes():
-    print('--------------------------------------------------')
+def main():
+    while True:
+        display_welcome()
+        choice = input("Enter '1' for One, '2' for Multiple, '3' to Quit: ").strip()
+        print("-" * 50)
+        
+        if choice == "1":
+            get_one_fortune()
+            print("-" * 50)
+            print("I hope you enjoyed your fortunes...\n")
+        elif choice == "2":
+            get_multiple_fortunes()
+            print("-" * 50)
+            print("I hope you enjoyed your fortunes...\n")
+        elif choice == "3":
+            break
 
-def quit():
-    print()
-    print('I hope you enjoyed your fortunes...')
+if __name__ == "__main__":
+    main()
 
 ########################################
 #          SAMPLE OUTPUT
