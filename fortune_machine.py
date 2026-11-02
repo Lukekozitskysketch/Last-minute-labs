@@ -45,29 +45,21 @@ def get_directions():
 def get_one_fortune():
     print("-" * 50)
     print("ONE FORTUNE:")
-    print("There's a lot of atoms in you.")
+    print(random.choice(FORTUNES))
     print("\n")
 
-def get_multiple_fortunes(count):
+def get_multiple_fortunes():
     print("-" * 50)
     print("MULTIPLE FORTUNES:")
-    print("How many fortunes would you like? ")
+    user_input = input("How many fortunes would you like? ").strip()
     print()
-    if count == 7:
-        print("1 - Bring an umbrella today.\n")
-        print("2 - There's a lot of atoms in you.\n")
-        print("3 - You will live a long, prosperous life.\n")
-        print("4 - Chin up! It's going to be a great day!\n")
-        print("5 - If you have no pockets, your phone can't fall out of them!\n")
-        print("6 - Chin up! It's going to be a great day!\n")
-        print("7 - You will live a long, prosperous life.\n")
-    elif count == 3:
-        print("1 - Fear is for chumps!\n")
-        print("2 - Fear is for chumps!\n")
-        print("3 - Chin up! It's going to be a great day!\n")
-    else:
+    try:
+        count = int(user_input)
+        # Dynamically loops up to whatever number the user typed in
         for i in range(1, count + 1):
             print(f"{i} - {random.choice(FORTUNES)}\n")
+    except ValueError:
+        pass
     print("-" * 50)
     print("\nI hope you enjoyed your fortunes...")
 
@@ -81,12 +73,7 @@ def run_fortune_machine():
             if choice == '1':
                 get_one_fortune()
             elif choice == '2':
-                count_str = input().strip()
-                try:
-                    count = int(count_str)
-                    get_multiple_fortunes(count)
-                except ValueError:
-                    pass
+                get_multiple_fortunes()
             elif choice == '3' or choice.lower() == 'quit':
                 break
     except EOFError:
