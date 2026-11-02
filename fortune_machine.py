@@ -14,7 +14,7 @@
 
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-import fortune_until
+import fortune_util
 
 def main():
     while True:
