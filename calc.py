@@ -15,7 +15,32 @@
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
 
+def run_calculator():
+    print("Welcome to the Calculator\n")
+    
+    num1 = float(input("What is the first number? "))
+    num2 = float(input("What is the second number? "))
+    print()
+    
+    total_sum = num1 + num2
+    difference = num1 - num2
+    product = num1 * num2
+    
+    if num2 != 0:
+        quotient = num1 / num2
+    else:
+        quotient = "Undefined"
+        
+    print("SUM = ", total_sum)
+    print("DIFFERENCE = ", difference)
+    print("PRODUCT = ", product)
+    print("QUOTIENT = ", quotient)
+    print()
+    
+    print("Have a nice, mathy day.")
 
+if __name__ == "__main__":
+    run_calculator()
 
 
 
