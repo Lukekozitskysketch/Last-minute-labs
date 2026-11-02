@@ -12,8 +12,6 @@
 # 4. The Sample Output has been included in this code for your convenience
 
 
-
-
     ########## ENTER YER CODE BELOW THIS LINE ##########
 import fortune_util
 
@@ -31,10 +29,6 @@ def run_fortune_machine():
 if __name__ == "__main__":
     main()
     ########### END YER CODE ABOVE THIS LINE ###########
-
-
-
-
 
 ########################################
 #          SAMPLE OUTPUT
@@ -81,29 +75,6 @@ How many fortunes would you like? 7
 I hope you enjoyed your fortunes...
 
 '''
-    ########## ENTER YER CODE BELOW THIS LINE ##########
-    while True:
-        fortune_util.display_welcome()
-        choice = input("Enter '1' for One, '2' for Multiple, '3' to Quit: ").strip()
-        print("-" * 50)
-        
-        if choice == "1":
-            fortune_util.get_one_fortune()
-            print("-" * 50)
-            print("I hope you enjoyed your fortunes...\n")
-        elif choice == "2":
-            fortune_util.get_multiple_fortunes()
-            print("-" * 50)
-            print("I hope you enjoyed your fortunes...\n")
-        elif choice == "3":
-            break
-    ########### END YER CODE ABOVE THIS LINE ###########
-
-
-main()
-
-
-
 ########################################
 #          SAMPLE OUTPUT
 ########################################
