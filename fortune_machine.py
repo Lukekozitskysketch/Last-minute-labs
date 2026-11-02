@@ -17,27 +17,28 @@
 import fortune_util
 
 def main():
+    fortune_util.get_directions()
+    fortune_util.dashes()
+    
     while True:
         try:
-            fortune_util.get_directions()
-            fortune_util.dashes()
-            
             choice = input().strip().lower()
             
-            if choice in ['1', 'one']:
+            if "one" in choice or choice == "1":
                 print("ONE FORTUNE:")
                 fortune_util.get_one_fortune()
-                fortune_util.dashes()
-                fortune_util.quit()
-            elif choice in ['multiple', 'many']:
+                
+            elif "multiple" in choice or "many" in choice:
                 print("MULTIPLE FORTUNES:")
                 num = int(input("How many fortunes would you like? "))
                 fortune_util.get_multiple_fortunes(num)
+                
+            elif "quit" in choice or choice == "q":
                 fortune_util.dashes()
                 fortune_util.quit()
-            elif choice in ['quit', 'q', 'exit']:
                 break
-        except EOFError:
+                
+        except (EOFError, ValueError):
             break
 
 if __name__ == "__main__":
