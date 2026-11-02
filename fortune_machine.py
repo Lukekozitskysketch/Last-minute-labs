@@ -18,50 +18,49 @@ print("Welcome to the Fortune Telling Machine")
 print("The instructions are simple - you may request one")
 print("fortune, you may request multiple fortunes, or you")
 print("may request to quit.")
-print()  # Fulfills the blank row (\n\r) spacer requirement
+print() # Matches the blank space \r\n spacer
 
 print("Please enjoy your fortune(s)! But beware! When you use")
 print("the Fortune Telling Machine, you get what you get and")
 print("you don't get upset!")
-print()  # Fulfills the blank row (\n\r) spacer requirement
+print() # Matches the blank space \r\n spacer
 
-# List/Dictionary of your given fortunes
-fortunes = {
-    1: "Bring an umbrella today.",
-    2: "There's a lot of atoms in you.",
-    3: "You will live a long, prosperous life.",
-    4: "Chin up! It's going to be a great day!",
-    5: "If you have no pockets, your phone can't fall out of them!",
-    6: "Chin up! It's going to be a great day!",
-    7: "You will live a long, prosperous life."
-}
+# Define your exact fortune pool
+fortunes = [
+    "Bring an umbrella today.",
+    "There's a lot of atoms in you.",
+    "You will live a long, prosperous life.",
+    "Chin up! It's going to be a great day!",
+    "If you have no pockets, your phone can't fall out of them!",
+    "Chin up! It's going to be a great day!",
+    "You will live a long, prosperous life."
+]
 
-# 2. Get User Initial Menu Choice 
-# (Grader inputs 'one', 'multiple', or 'quit' here)
-user_choice = input().lower().strip()
+# 2. Accept the menu selection
+user_input = input().strip().lower()
 
-# 3. Use Conditional Branch Execution to isolate the outputs
-if user_choice == "one":
+# 3. Handle the choices with exact string matches
+if user_input == "one":
+    # MUST BE ALL CAPS
     print("ONE FORTUNE:")
-    # Replace this sample with your actual random/indexed choice code:
-    print(fortunes[2]) 
+    # Print exactly one fortune here (e.g., the first one or random)
+    print(fortunes[0])
 
-elif user_choice == "multiple":
+elif user_input == "multiple":
+    # MUST BE ALL CAPS
     print("MULTIPLE FORTUNES:")
-    # The grader checks the prompt string matching here:
+    # Match the exact question prompt string
     num_fortunes = int(input("How many fortunes would you like? "))
     
-    # Loop to print the number of fortunes selected
+    # Loop through the requested number of fortunes
     for i in range(1, num_fortunes + 1):
         # Format matching the loop logic requirement "1 - fortune text"
-        # Adjust fortune index selection depending on how your code picks them
-        print(f"{i} - {fortunes[i if i <= 7 else 1]}")
+        print(f"{i} - {fortunes[(i-1) % len(fortunes)]}")
 
-elif user_choice == "quit":
-    # Logic if user picks quit menu option
+elif user_input == "quit":
     pass
 
-# 4. Final end-of-program termination output sequence
+# 4. Print the final closing text ONCE at the absolute end of the program
 print("I hope you enjoyed your fortunes...")
     ########### END YER CODE ABOVE THIS LINE ###########
 
