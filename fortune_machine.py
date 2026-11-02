@@ -1,4 +1,3 @@
-import sys
 import random
 
 FORTUNES = [
@@ -10,7 +9,7 @@ FORTUNES = [
     "Fear is for chumps!"
 ]
 
-def display_welcome():
+def print_welcome():
     print("-" * 50)
     print("Welcome to the Fortune Telling Machine\n")
     print("The instructions are simple - you may request one")
@@ -34,27 +33,35 @@ def get_multiple_fortunes():
         for i in range(1, count + 1):
             print(f"{i} - {random.choice(FORTUNES)}\n")
     except ValueError:
-        pass
-
-sys.modules['fortune_util'] = sys.modules[__name__]
-import fortune_util
+        print("Please enter a valid number next time!\n")
 
 def main():
-    run_fortune_machine()
+    while True:
+        print_welcome()
+        print("Options:")
+        print("1. One Fortune")
+        print("2. Multiple Fortunes")
+        print("3. Quit")
+        choice = input("What would you like to do? (1/2/3): ").strip()
+        print()
+        if choice == "1":
+            print("-" * 50)
+            get_one_fortune()
+            print("-" * 50)
+            print("\nI hope you enjoyed your fortunes...\n")
+        elif choice == "2":
+            print("-" * 50)
+            get_multiple_fortunes()
+            print("-" * 50)
+            print("\nI hope you enjoyed your fortunes...\n")
+        elif choice == "3" or choice.lower() == 'quit':
+            print("Goodbye! May good fortune follow you.")
+            break
+        else:
+            print("Invalid option. Please choose 1, 2, or 3.\n")
 
-def run_fortune_machine():
-
-    ########## ENTER YER CODE BELOW THIS LINE ##########
-    fortune_util.display_welcome()
-    fortune_util.get_one_fortune()
-    print("-" * 50)
-    fortune_util.get_multiple_fortunes()
-    print("-" * 50)
-    print("\nI hope you enjoyed your fortunes...")
-    ########### END YER CODE ABOVE THIS LINE ###########
-
-
-main()
+if __name__ == "__main__":
+    main()
 ########################################
 #          REFLECTION QUESTIONS
 ########################################
