@@ -22,27 +22,21 @@ def main():
 def run_fortune_machine():
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-import fortune_functions
-
-def main():
     while True:
-        fortune_functions.display_welcome()
+        fortune_util.display_welcome()
         choice = input("Enter '1' for One, '2' for Multiple, '3' to Quit: ").strip()
         print("-" * 50)
         
         if choice == "1":
-            fortune_functions.get_one_fortune()
+            fortune_util.get_one_fortune()
             print("-" * 50)
             print("I hope you enjoyed your fortunes...\n")
         elif choice == "2":
-            fortune_functions.get_multiple_fortunes()
+            fortune_util.get_multiple_fortunes()
             print("-" * 50)
             print("I hope you enjoyed your fortunes...\n")
         elif choice == "3":
             break
-
-if __name__ == "__main__":
-    main()
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
@@ -95,7 +89,6 @@ How many fortunes would you like? 7
 I hope you enjoyed your fortunes...
 
 '''
-
 ########################################
 #          REFLECTION QUESTIONS
 ########################################
