@@ -81,11 +81,14 @@ def run_fortune_machine():
             print("\nI hope you enjoyed your fortunes...")
         elif choice == '2':
             get_multiple_fortunes()
+        elif choice == '3':
+            print("Thank you for playing! Goodbye.")
     except EOFError:
         pass
 
 if __name__ == "__main__":
     run_fortune_machine()
+
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
