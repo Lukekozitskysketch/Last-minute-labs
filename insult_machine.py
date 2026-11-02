@@ -37,7 +37,7 @@ def two_insults():
     res2 = random.choice(insults)
     print(res1)
     print(res2)
-    return f"{res1}\n{res2}"
+    return [res1, res2]
 
 
 def insult_specific_name(name=None):
@@ -52,11 +52,13 @@ def insult_x_number_of_insults(num=None):
     if num is None:
         num = int(input("Enter number of insults: "))
     if num <= 0:
-        return ""
-    lines = [random.choice(insults) for _ in range(num)]
-    for line in lines:
-        print(line)
-    return "\n".join(lines)
+        return []
+    lines = []
+    for _ in range(num):
+        res = random.choice(insults)
+        print(res)
+        lines.append(res)
+    return lines
 
 
 def goodbye():
