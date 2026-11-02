@@ -13,30 +13,44 @@
 
 
 
-
-import fortune_util
+    ########## ENTER YER CODE BELOW THIS LINE ##########
+import fortune_until
 
 def main():
-    run_fortune_machine()
+    while True:
+        fortune_until.get_directions()
+        fortune_until.dashes()
+        
+        choice = input("Enter '1' for one fortune, 'M' for multiple fortunes, or 'Q' to quit: ").strip().upper()
+        
+        if choice == '1':
+            fortune_until.dashes()
+            print("ONE FORTUNE:")
+            fortune_until.get_one_fortune()
+            fortune_until.dashes()
+            fortune_until.quit()
+        elif choice == 'M':
+            fortune_until.dashes()
+            print("MULTIPLE FORTUNES:")
+            try:
+                num = int(input("How many fortunes would you like? "))
+                fortune_until.get_multiple_fortunes(num)
+            except ValueError:
+                print("Please enter a valid number.")
+            fortune_until.dashes()
+            fortune_until.quit()
+        elif choice == 'Q':
+            print("\nGoodbye!")
+            break
+        else:
+            print("\nInvalid choice. Please try again.")
 
-def run_fortune_machine():
-
-    ########## ENTER YER CODE BELOW THIS LINE ##########
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()
 
 
 
     ########### END YER CODE ABOVE THIS LINE ###########
-
-
-main()
-
 
 
 ########################################
