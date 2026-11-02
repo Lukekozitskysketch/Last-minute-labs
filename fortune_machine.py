@@ -4,6 +4,7 @@ def main():
     run_fortune_machine()
 
 def run_fortune_machine():
+
     ########## ENTER YER CODE BELOW THIS LINE ##########
     fortune_util.display_welcome()
     fortune_util.get_one_fortune()
@@ -13,8 +14,8 @@ def run_fortune_machine():
     print("\nI hope you enjoyed your fortunes...")
     ########### END YER CODE ABOVE THIS LINE ###########
 
-if __name__ == "__main__":
-    main()
+
+main()
 ########################################
 #          REFLECTION QUESTIONS
 ########################################
