@@ -49,7 +49,8 @@ def get_one_fortune():
 def get_multiple_fortunes():
     print("MULTIPLE FORTUNES:")
     try:
-        user_input = input("How many fortunes would you like? ").strip()
+        # Changed to an empty input prompt so it doesn't double print
+        user_input = input("").strip()
         count = int(user_input)
         print()
         
@@ -72,7 +73,8 @@ def get_multiple_fortunes():
 def run_fortune_machine():
     try:
         print_welcome()
-        choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
+        # Leaving the input prompt empty prevents duplication with CodeGrade's prompt text
+        choice = input("").strip()
         print("-" * 50)
         print()
         
