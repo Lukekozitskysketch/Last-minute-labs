@@ -14,35 +14,63 @@
 
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-import fortune_util
+import random
 
-def main():
+FORTUNES = [
+    "There's a lot of atoms in you.",
+    "Bring an umbrella today.",
+    "You will live a long, prosperous life.",
+    "Chin up! It's going to be a great day!",
+    "If you have no pockets, your phone can't fall out of them!",
+    "Fear is for chumps!"
+]
+
+def print_welcome():
+    print("-" * 50)
+    print("Welcome to the Fortune Telling Machine\n")
+    print("The instructions are simple - you may request one")
+    print("fortune, you  may request multiple fortunes, or you")
+    print("may request to quit.\n")
+    print("Please enjoy your fortune(s)! But beware! When you use")
+    print("the Fortune Telling Machine, you get what you get and")
+    print("you don't get upset!")
+    print("-" * 50)
+
+def get_one_fortune():
+    print("ONE FORTUNE:")
+    print(random.choice(FORTUNES))
+    print("\n")
+
+def get_multiple_fortunes():
+    print("MULTIPLE FORTUNES:")
     try:
-        while True:
-            fortune_util.get_directions()
-            fortune_util.dashes()
-            
-            choice = input().strip().lower()
-            
-            if "one" in choice or choice == "1":
-                print("ONE FORTUNE:")
-                fortune_util.get_one_fortune()
-                
-            elif "multiple" in choice or "many" in choice:
-                print("MULTIPLE FORTUNES:")
-                num = int(input("How many fortunes would you like? "))
-                fortune_util.get_multiple_fortunes(num)
-                
-            elif "quit" in choice or choice == "q":
-                fortune_util.dashes()
-                fortune_util.quit()
-                break
-                
-    except (EOFError, ValueError):
+        count = int(input("How many fortunes would you like? "))
+        print()
+        for i in range(1, count + 1):
+            print(f"{i} - {random.choice(FORTUNES)}\n")
+    except ValueError:
         pass
+    print("-" * 50)
+    print("\nI hope you enjoyed your fortunes...\n")
+
+def run_fortune_machine():
+    while True:
+        print_welcome()
+        choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
+        print("-" * 50)
+        print()
+        
+        if choice == '1':
+            get_one_fortune()
+            print("-" * 50)
+            print("\nI hope you enjoyed your fortunes...\n")
+        elif choice == '2':
+            get_multiple_fortunes()
+        elif choice == '3':
+            break
 
 if __name__ == "__main__":
-    main()
+    run_fortune_machine()
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
