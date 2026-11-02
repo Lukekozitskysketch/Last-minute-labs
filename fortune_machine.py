@@ -30,16 +30,22 @@ FORTUNES = [
     "Fear is for chumps!"
 ]
 
+# Track if welcome message has been shown globally
+WELCOME_SHOWN = False
+
 def print_welcome():
-    print("-" * 50)
-    print("Welcome to the Fortune Telling Machine\n")
-    print("The instructions are simple - you may request one")
-    print("fortune, you  may request multiple fortunes, or you")
-    print("may request to quit.\n")
-    print("Please enjoy your fortune(s)! But beware! When you use")
-    print("the Fortune Telling Machine, you get what you get and")
-    print("you don't get upset!")
-    print("-" * 50)
+    global WELCOME_SHOWN
+    if not WELCOME_SHOWN:
+        print("-" * 50)
+        print("Welcome to the Fortune Telling Machine\n")
+        print("The instructions are simple - you may request one")
+        print("fortune, you  may request multiple fortunes, or you")
+        print("may request to quit.\n")
+        print("Please enjoy your fortune(s)! But beware! When you use")
+        print("the Fortune Telling Machine, you get what you get and")
+        print("you don't get upset!")
+        print("-" * 50)
+        WELCOME_SHOWN = True
 
 def get_one_fortune():
     print("ONE FORTUNE:")
@@ -71,8 +77,8 @@ def get_multiple_fortunes():
 
 def run_fortune_machine():
     try:
-        print_welcome()  # Moved outside the loop to prevent double printing
         while True:
+            print_welcome()
             choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
             print("-" * 50)
             print()
