@@ -25,7 +25,6 @@ def main():
             print("ONE FORTUNE:")
             fortune_util.get_one_fortune()
 
-        fortune_util.get_directions()
         fortune_util.dashes()
         choice2 = input().strip().lower()
         if "multiple" in choice2 or "many" in choice2:
