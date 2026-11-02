@@ -40,27 +40,6 @@ def get_multiple_fortunes():
             print(f"{i} - {random.choice(FORTUNES)}\n")
     except ValueError:
         pass
-
-def main():
-    while True:
-        display_welcome()
-        choice = input("Enter '1' for One, '2' for Multiple, '3' to Quit: ").strip()
-        print("-" * 50)
-        
-        if choice == "1":
-            get_one_fortune()
-            print("-" * 50)
-            print("I hope you enjoyed your fortunes...\n")
-        elif choice == "2":
-            get_multiple_fortunes()
-            print("-" * 50)
-            print("I hope you enjoyed your fortunes...\n")
-        elif choice == "3":
-            break
-
-if __name__ == "__main__":
-    main()
-
 ########################################
 #          SAMPLE OUTPUT
 ########################################
