@@ -1,42 +1,44 @@
-import insult_machine_util as im 
+import random
 
-def main():
-    print('TESTING: welcome()')
-    im.welcome()
-
-    print()
-    
-    print('TESTING: show_all_insults()')
-    im.show_all_insults()
-    
-    print()
-    
-    print('TESTING: one_insult()')
-    im.one_insult()
-
-    print()
-    
-    print('TESTING: two_insults()')
-    im.two_insults()
-
-    print()
-
-    print('TESTING: insult_specific_name(name)')
-    name = input('What is your name? ')
-    im.insult_specific_name(name)
-
-    print()
-
-    print('TESTING: insult_x_number_of_insults(num)')
-    num = int(input('Enter number of insults: '))
-    im.insult_x_number_of_insults(num)
-
-    print()
-
-    print('TESTING: goodbye()')
-    im.goodbye()
+INSULTS = ["A", "B", "C", "D", "E", "F"]
 
 
+def welcome():
+    print("-" * 33)
+    print("Welcome to the Insulternator 3500")
+    print("-" * 33)
+
+
+def show_all_insults():
+    print(INSULTS)
+
+
+def one_insult():
+    print(random.choice(INSULTS))
+
+
+def two_insults():
+    print(random.choice(INSULTS))
+    print(random.choice(INSULTS))
+
+
+def insult_specific_name(name=None):
+    if name is None:
+        name = input("What is your name? ")
+    print(f"{name}, here is your insult: {random.choice(INSULTS)}")
+
+
+def insult_x_number_of_insults(num=None):
+    if num is None:
+        num = int(input("Enter number of insults: "))
+    for _ in range(num):
+        print(random.choice(INSULTS))
+
+
+def goodbye():
+    print("-" * 45)
+    print("Thank you for playing the Insulternator 3500!")
+    print("-" * 45)
 
 
 
