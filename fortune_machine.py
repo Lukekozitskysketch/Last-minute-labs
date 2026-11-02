@@ -72,7 +72,6 @@ def get_multiple_fortunes():
 def run_fortune_machine():
     try:
         print_welcome()
-        
         choice = input().strip()
         print()
         
