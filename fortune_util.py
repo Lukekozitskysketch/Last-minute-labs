@@ -19,7 +19,7 @@ def display_welcome():
     print("-" * 50)
     print("Welcome to the Fortune Telling Machine\n")
     print("The instructions are simple - you may request one")
-    print("fortune, you may request multiple fortunes, or you")
+    print("fortune, you  may request multiple fortunes, or you")
     print("may request to quit.\n")
     print("Please enjoy your fortune(s)! But beware! When you use")
     print("the Fortune Telling Machine, you get what you get and")
