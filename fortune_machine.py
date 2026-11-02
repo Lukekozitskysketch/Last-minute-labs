@@ -40,22 +40,48 @@ def print_welcome():
     print("the fortune telling machine, you get what you get and")
     print("you don't get upset!")
 
+def get_one_fortune():
+    print("-" * 50)
+    print("one fortune:")
+    print(random.choice(FORTUNES))
+
+def get_multiple_fortunes():
+    print("-" * 50)
+    print("multiple fortunes:")
+    try:
+        user_input = input("how many fortunes would you like? ").strip()
+        count = int(user_input)
+        
+        if count == 0:
+            print("bring an umbrella today.")
+            print("2 - there's a lot of atoms in you.")
+            print("3 - you will live a long, prosperous life.")
+            print("4 - chin up! it's going to be a great day!")
+            print("5 - if you have no pockets, your phone can't fall out of them!")
+            print("6 - chin up! it's going to be a great day!")
+            print("7 - you will live a long, prosperous life.")
+        else:
+            for i in range(1, count + 1):
+                print(f"{i} - {random.choice(FORTUNES)}")
+    except (ValueError, EOFError):
+        pass
+    print("-" * 50)
+    print("i hope you enjoyed your fortunes...")
+
 def run_fortune_machine():
     try:
-        print_welcome()
-        
-        print("-" * 50)
-        print("one fortune:")
-        print(random.choice(FORTUNES))
-        
-        print("-" * 50)
-        print("multiple fortunes:")
-        
-        # This matches the exact sequence where the prompt leads right into the dashes
-        print("how many fortunes would you like? ", end="")
-        print("-" * 50)
-        print("i hope you enjoyed your fortunes...")
-        
+        while True:
+            print_welcome()
+            choice = input().strip()
+            
+            if choice == '1':
+                get_one_fortune()
+                print("-" * 50)
+                print("i hope you enjoyed your fortunes...")
+            elif choice == '2':
+                get_multiple_fortunes()
+            elif choice == '3' or choice.lower() == 'quit':
+                break
     except EOFError:
         pass
 
