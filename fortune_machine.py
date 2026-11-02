@@ -71,8 +71,8 @@ def get_multiple_fortunes():
 
 def run_fortune_machine():
     try:
+        print_welcome()  # Moved outside the loop to prevent double printing
         while True:
-            print_welcome()
             choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
             print("-" * 50)
             print()
