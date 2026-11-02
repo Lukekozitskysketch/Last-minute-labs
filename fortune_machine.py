@@ -20,6 +20,7 @@ def main():
     try:
         fortune_util.get_directions()
         fortune_util.dashes()
+        
         choice1 = input().strip().lower()
         if "one" in choice1 or choice1 == "1":
             print("ONE FORTUNE:")
