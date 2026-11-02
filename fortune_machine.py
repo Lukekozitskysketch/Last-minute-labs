@@ -14,69 +14,31 @@
 
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-import sys
-from types import ModuleType
+print("Welcome to the Fortune Telling Machine")
+print("The instructions are simple - you may request one")
+print("fortune, you may request multiple fortunes, or you")
+print("may request to quit.")
+print() # Notice the white space breaks tracked by the green indicator
 
-if 'insult_machine_util' not in sys.modules:
-    sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
+print("Please enjoy your fortune(s)! But beware! When you use")
+print("the Fortune Telling Machine, you get what you get and")
+print("you don't get upset!")
+print()
 
-import random
+# 2. PLACE YOUR USER CHOICE LOGIC HERE (e.g., input parsing)
+# Your text must only print when that path is actually chosen!
 
-FORTUNES = [
-    "there's a lot of atoms in you.",
-    "bring an umbrella today.",
-    "you will live a long, prosperous life.",
-    "chin up! it's going to be a great day!",
-    "if you have no pockets, your phone can't fall out of them!",
-    "fear is for chumps!"
-]
+# IF the user chooses one fortune path:
+print("ONE FORTUNE:")
+# print your fortune here
 
-def print_welcome():
-    print("-" * 50)
-    print("welcome to the fortune telling machine\n")
-    print("the instructions are simple - you may request one")
-    print("fortune, you  may request multiple fortunes, or you")
-    print("may request to quit.\n")
-    print("please enjoy your fortune(s)! but beware! when you use")
-    print("the fortune telling machine, you get what you get and")
-    print("you don't get upset!")
+# ELIF the user chooses multiple fortunes path:
+print("MULTIPLE FORTUNES:")
+num_fortunes = input("How many fortunes would you like? ")
+# print multiple fortunes here loop
 
-def run_fortune_machine():
-    try:
-        # 1. Print the welcome instructions header
-        print_welcome()
-        
-        # 2. Output the single fortune block sequentially
-        print("-" * 50)
-        print("one fortune:")
-        print(random.choice(FORTUNES))
-        print("\n")
-        
-        # 3. Output the multiple fortunes block sequentially
-        print("-" * 50)
-        print("multiple fortunes:")
-        print("how many fortunes would you like? ", end="")
-        
-        # Read CodeGrade's dynamic counter input silently to prevent script termination
-        user_input = input().strip()
-        print()
-        
-        try:
-            count = int(user_input)
-            for i in range(1, count + 1):
-                print(f"{i} - {random.choice(FORTUNES)}\n")
-        except ValueError:
-            pass
-            
-        # 4. Finish directly on the expected conclusion string
-        print("-" * 50)
-        print("\ni hope you enjoyed your fortunes...")
-        
-    except EOFError:
-        pass
-
-if __name__ == "__main__":
-    run_fortune_machine()
+# AT THE VERY END OF YOUR CODE EXECUTION (outside the choices):
+print("I hope you enjoyed your fortunes...")
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
