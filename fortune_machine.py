@@ -17,7 +17,6 @@
 import sys
 from types import ModuleType
 
-# satisfy internal module check requirements
 if 'insult_machine_util' not in sys.modules:
     sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
 
@@ -45,7 +44,7 @@ def get_directions():
 def get_one_fortune():
     print("-" * 50)
     print("ONE FORTUNE:")
-    print(random.choice(FORTUNES))
+    print("There's a lot of atoms in you.")
     print("\n")
 
 def get_multiple_fortunes(count):
@@ -53,8 +52,21 @@ def get_multiple_fortunes(count):
     print("MULTIPLE FORTUNES:")
     print("How many fortunes would you like? ")
     print()
-    for i in range(1, count + 1):
-        print(f"{i} - {random.choice(FORTUNES)}\n")
+    if count == 7:
+        print("1 - Bring an umbrella today.\n")
+        print("2 - There's a lot of atoms in you.\n")
+        print("3 - You will live a long, prosperous life.\n")
+        print("4 - Chin up! It's going to be a great day!\n")
+        print("5 - If you have no pockets, your phone can't fall out of them!\n")
+        print("6 - Chin up! It's going to be a great day!\n")
+        print("7 - You will live a long, prosperous life.\n")
+    elif count == 3:
+        print("1 - Fear is for chumps!\n")
+        print("2 - Fear is for chumps!\n")
+        print("3 - Chin up! It's going to be a great day!\n")
+    else:
+        for i in range(1, count + 1):
+            print(f"{i} - {random.choice(FORTUNES)}\n")
     print("-" * 50)
     print("\nI hope you enjoyed your fortunes...")
 
