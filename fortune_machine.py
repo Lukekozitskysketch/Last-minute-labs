@@ -18,24 +18,26 @@ import fortune_util
 
 def main():
     try:
-        fortune_util.get_directions()
-        fortune_util.dashes()
-        
-        choice1 = input().strip().lower()
-        if "one" in choice1 or choice1 == "1":
-            print("ONE FORTUNE:")
-            fortune_util.get_one_fortune()
-
-        fortune_util.dashes()
-        choice2 = input().strip().lower()
-        if "multiple" in choice2 or "many" in choice2:
-            print("MULTIPLE FORTUNES:")
-            num = int(input("How many fortunes would you like? "))
-            fortune_util.get_multiple_fortunes(num)
-
-        fortune_util.dashes()
-        fortune_util.quit()
-
+        while True:
+            fortune_util.get_directions()
+            fortune_util.dashes()
+            
+            choice = input().strip().lower()
+            
+            if "one" in choice or choice == "1":
+                print("ONE FORTUNE:")
+                fortune_util.get_one_fortune()
+                
+            elif "multiple" in choice or "many" in choice:
+                print("MULTIPLE FORTUNES:")
+                num = int(input("How many fortunes would you like? "))
+                fortune_util.get_multiple_fortunes(num)
+                
+            elif "quit" in choice or choice == "q":
+                fortune_util.dashes()
+                fortune_util.quit()
+                break
+                
     except (EOFError, ValueError):
         pass
 
