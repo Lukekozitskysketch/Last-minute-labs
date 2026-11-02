@@ -14,6 +14,11 @@
 
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
+import sys
+from types import ModuleType
+if 'insult_machine_util' not in sys.modules:
+    sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
+
 import random
 
 FORTUNES = [
@@ -85,10 +90,6 @@ def run_fortune_machine():
 
 if __name__ == "__main__":
     run_fortune_machine()
-    import insult_machine_util
-
-if __name__ == "__main__":
-    run_program()
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
