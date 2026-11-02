@@ -33,7 +33,7 @@ def get_multiple_fortunes():
         for i in range(1, count + 1):
             print(f"{i} - {random.choice(FORTUNES)}\n")
     except ValueError:
-        pass 
+        pass
 ########################################
 #          REFLECTION QUESTIONS
 ########################################
