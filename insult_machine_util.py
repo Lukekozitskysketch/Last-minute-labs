@@ -4,11 +4,11 @@ import random
 # Insert your insults into the strings in the list.
 insults = [
     'You look like a bunch of rocks',
-    'A',
-    'B',
-    'C',
-    'D',
-    'E'
+    'Your Ugly',
+    'You smell',
+    'Your nose looks weird',
+    'Your socks are dirty',
+    'You suck at python'
 ]
 
 def welcome():
