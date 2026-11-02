@@ -16,18 +16,19 @@
     ########## ENTER YER CODE BELOW THIS LINE ##########
 import random
 
-# 1. Print Intro Block
+# 1. Base Introductory Text Sequence
 print("Welcome to the Fortune Telling Machine")
 print("The instructions are simple - you may request one")
 print("fortune, you may request multiple fortunes, or you")
 print("may request to quit.")
-print() 
+print()  # Blank row spacer
 
 print("Please enjoy your fortune(s)! But beware! When you use")
 print("the Fortune Telling Machine, you get what you get and")
 print("you don't get upset!")
-print() 
+print()  # Blank row spacer
 
+# List of your given fortunes
 fortunes_pool = [
     "Bring an umbrella today.",
     "There's a lot of atoms in you.",
@@ -38,27 +39,22 @@ fortunes_pool = [
     "You will live a long, prosperous life."
 ]
 
-# ==========================================
-# STEP A: GET THE MENU SELECTION INPUT
-# ==========================================
-# Keep the input empty so it doesn't print extra text.
-# .strip().lower() cleans up spaces and accidental caps from the test.
+# 2. Quietly accept the menu selection (e.g., 'one')
 user_choice = input().strip().lower()
 
-
-# 2. Check the input choice using conditional branches
+# 3. Process the logic split
 if user_choice == "one":
+    # MUST BE ALL CAPS
     print("ONE FORTUNE:")
+    
+    # Pick a random fortune from your list
     print(random.choice(fortunes_pool))
 
 elif user_choice == "multiple":
+    # MUST BE ALL CAPS
     print("MULTIPLE FORTUNES:")
     
-    # ==========================================
-    # STEP B: GET THE NUMBER OF FORTUNES INPUT
-    # ==========================================
-    # For this specific step, the grader explicitly expects the text prompt 
-    # "How many fortunes would you like?" inside the input function.
+    # Text prompt question matches the grader's orange box
     num_fortunes = int(input("How many fortunes would you like? "))
     
     for i in range(1, num_fortunes + 1):
@@ -66,10 +62,9 @@ elif user_choice == "multiple":
         print(f"{i} - {selected_fortune}")
 
 elif user_choice == "quit":
-    # If they type quit, it skips directly to the closing message below
     pass
 
-# 3. Final Closing Message
+# 4. Final end-of-program closing statement
 print("I hope you enjoyed your fortunes...")
     ########### END YER CODE ABOVE THIS LINE ###########
 
