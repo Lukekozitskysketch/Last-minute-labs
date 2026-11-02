@@ -14,14 +14,15 @@
 
 
 
+
+
+    ########## ENTER YER CODE BELOW THIS LINE ##########
 import fortune_util
 
 def main():
     run_fortune_machine()
 
 def run_fortune_machine():
-
-    ########## ENTER YER CODE BELOW THIS LINE ##########
     while True:
         fortune_util.display_welcome()
         choice = input("Enter '1' for One, '2' for Multiple, '3' to Quit: ").strip()
@@ -37,10 +38,11 @@ def run_fortune_machine():
             print("I hope you enjoyed your fortunes...\n")
         elif choice == "3":
             break
+
+if __name__ == "__main__":
+    main()
     ########### END YER CODE ABOVE THIS LINE ###########
 
-
-main()
 
 
 
