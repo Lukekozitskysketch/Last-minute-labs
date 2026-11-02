@@ -19,6 +19,18 @@ from types import ModuleType
 if 'insult_machine_util' not in sys.modules:
     sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
 
+import random
+
+FORTUNES = [
+    "welcome to the fortune telling machine",
+    "the instructions are simple - you may request one",
+    "fortune, you  may request multiple fortunes, or you",
+    "may request to quit.",
+    "please enjoy your fortune(s)! but beware! when you use",
+    "the fortune telling machine, you get what you get and",
+    "you don't get upset!"
+]
+
 def print_welcome():
     print("-" * 50)
     print("welcome to the fortune telling machine")
@@ -40,33 +52,21 @@ def run_fortune_machine():
             if choice == '1':
                 print("-" * 50)
                 print("one fortune:")
-                # Prints the exact string slice CodeGrade expects
-                print("me to the fortune telling machine")
+                print(random.choice(FORTUNES))
                 
             elif choice == '2':
                 print("-" * 50)
                 print("multiple fortunes:")
-                user_input = input("how many fortunes would you like? ").strip()
+                print("how many fortunes would you like? ", end="")
+                
+                user_input = input().strip()
                 try:
                     count = int(user_input)
-                    
-                    # Exact string segments requested by the sequential auto-grader log
-                    fortunes_pool = [
-                        "he instructions are simple - you may request one",
-                        "fortune, you  may request multiple fortunes, or you",
-                        "may request to quit.",
-                        "please enjoy your fortune(s)! but beware! when you use",
-                        "the fortune telling machine, you get what you get and",
-                        "you don't get upset!",
-                        ""
-                    ]
-                    
                     for i in range(1, count + 1):
-                        # Loops cleanly through the sequence up to the user's count
-                        segment = fortunes_pool[(i - 1) % len(fortunes_pool)]
-                        print(f"{i}{segment}")
+                        print(f"{i} - {random.choice(FORTUNES)}")
                 except ValueError:
                     pass
+                    
                 print("-" * 50)
                 print("i hope you enjoyed your fortunes...", end="")
                 
