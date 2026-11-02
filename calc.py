@@ -1,8 +1,8 @@
 # FILE NAME - calc.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 11-2-26
+# BRIEF DESCRIPTION:  Calculator
 
 
 
@@ -98,13 +98,13 @@ Have a nice, mathy day.
 1. What was the hardest part of completing this lab? 
 
 
-
+Getting the whole calculator set up
 
 
 
 2. How did you decide if the functions in the `calc_util` module should return or print?
 
-
+it is much easier if it doenst print
 
 
 
