@@ -22,24 +22,21 @@ def main():
             fortune_util.get_directions()
             fortune_util.dashes()
             
-            choice = input().strip().upper()
+            choice = input().strip().lower()
             
-            if choice == '1':
+            if choice in ['1', 'one']:
                 print("ONE FORTUNE:")
                 fortune_util.get_one_fortune()
                 fortune_util.dashes()
                 fortune_util.quit()
-            elif choice == 'M':
+            elif choice in ['multiple', 'many']:
                 print("MULTIPLE FORTUNES:")
-                num_str = input("How many fortunes would you like? ")
-                num = int(num_str)
+                num = int(input("How many fortunes would you like? "))
                 fortune_util.get_multiple_fortunes(num)
                 fortune_util.dashes()
                 fortune_util.quit()
-            elif choice == 'Q':
+            elif choice in ['quit', 'q', 'exit']:
                 break
-            else:
-                print("Invalid choice. Please try again.")
         except EOFError:
             break
 
