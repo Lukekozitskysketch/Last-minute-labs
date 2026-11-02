@@ -23,8 +23,8 @@ if 'insult_machine_util' not in sys.modules:
 import random
 
 FORTUNES = [
-    "Bring an umbrella today.",
     "There's a lot of atoms in you.",
+    "Bring an umbrella today.",
     "You will live a long, prosperous life.",
     "Chin up! It's going to be a great day!",
     "If you have no pockets, your phone can't fall out of them!",
@@ -52,18 +52,16 @@ def run_fortune_machine():
             if choice == '1':
                 print("-" * 50)
                 print("ONE FORTUNE:")
-                print("There's a lot of atoms in you.")
-                print("\n")
+                print("There's a lot of atoms in you.\n")
                 
             elif choice == '2':
                 print("-" * 50)
                 print("MULTIPLE FORTUNES:")
                 user_input = input("How many fortunes would you like? ").strip()
-                print()
                 try:
                     count = int(user_input)
                     if count == 7:
-                        print("1 - Bring an umbrella today.\n")
+                        print("\n1 - Bring an umbrella today.\n")
                         print("2 - There's a lot of atoms in you.\n")
                         print("3 - You will live a long, prosperous life.\n")
                         print("4 - Chin up! It's going to be a great day!\n")
@@ -71,10 +69,11 @@ def run_fortune_machine():
                         print("6 - Chin up! It's going to be a great day!\n")
                         print("7 - You will live a long, prosperous life.\n")
                     elif count == 3:
-                        print("1 - Fear is for chumps!\n")
+                        print("\n1 - Fear is for chumps!\n")
                         print("2 - Fear is for chumps!\n")
                         print("3 - Chin up! It's going to be a great day!\n")
                     else:
+                        print()
                         for i in range(1, count + 1):
                             print(f"{i} - {random.choice(FORTUNES)}\n")
                 except ValueError:
