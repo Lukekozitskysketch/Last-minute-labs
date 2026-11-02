@@ -1,8 +1,8 @@
 # FILE NAME - fortune_machine.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 11-2-26
+# BRIEF DESCRIPTION:  Fortune Machine
 
 
 
@@ -129,13 +129,13 @@ I hope you enjoyed your fortunes...
 1. What was the hardest part of completing this lab? 
 
 
-
+getting the fortunes to process
 
 
 
 2. What value do you see in having external modules?
 
-
+They save extra time and work
 
 
 
