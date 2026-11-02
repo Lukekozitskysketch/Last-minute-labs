@@ -22,7 +22,6 @@ def main():
 def run_fortune_machine():
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-
 import random
 
 FORTUNES = [
@@ -79,12 +78,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
 
 
     ########### END YER CODE ABOVE THIS LINE ###########
