@@ -24,7 +24,7 @@ def display_welcome():
 def get_one_fortune():
     print("ONE FORTUNE:")
     print(random.choice(FORTUNES))
-    print("\n")
+    print()
 
 def get_multiple_fortunes():
     print("MULTIPLE FORTUNES:")
@@ -36,7 +36,6 @@ def get_multiple_fortunes():
     except ValueError:
         pass
 
-# This forces 'fortune_util' to look directly inside this file for the functions
 sys.modules['fortune_util'] = sys.modules[__name__]
 import fortune_util
 
