@@ -11,38 +11,60 @@ insults = [
 
 
 def welcome():
-    print("---------------------------------")
-    print("Welcome to the Insulternator 3500")
-    print("---------------------------------")
+    lines = [
+        "---------------------------------",
+        "Welcome to the Insulternator 3500",
+        "---------------------------------",
+    ]
+    for line in lines:
+        print(line)
+    return lines
 
 
 def show_all_insults():
     print(insults)
+    return insults
 
 
 def one_insult():
-    print(random.choice(insults))
+    res = random.choice(insults)
+    print(res)
+    return res
 
 
 def two_insults():
-    print(random.choice(insults))
-    print(random.choice(insults))
+    res1 = random.choice(insults)
+    res2 = random.choice(insults)
+    print(res1)
+    print(res2)
+    return [res1, res2]
 
 
 def insult_specific_name(name=None):
     if name is None:
         name = input("What is your name? ")
-    print(f"{name}, here is your insult: {random.choice(insults)}")
+    res = f"{name}, here is your insult: {random.choice(insults)}"
+    print(res)
+    return res
 
 
 def insult_x_number_of_insults(num=None):
     if num is None:
         num = int(input("Enter number of insults: "))
+    lines = []
     for _ in range(num):
-        print(random.choice(insults))
+        res = random.choice(insults)
+        print(res)
+        lines.append(res)
+    return lines
 
 
 def goodbye():
-    print("---------------------------------------------")
-    print("Thank you for playing the Insulternator 3500!")
-    print("---------------------------------------------")
+    lines = [
+        "---------------------------------------------",
+        "Thank you for playing the Insulternator 3500!",
+        "---------------------------------------------",
+    ]
+    for line in lines:
+        print(line)
+    return lines
