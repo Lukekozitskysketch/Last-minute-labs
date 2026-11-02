@@ -59,26 +59,29 @@ def get_multiple_fortunes():
         else:
             for i in range(1, count + 1):
                 print(f"{i} - {random.choice(FORTUNES)}\n")
-    except ValueError:
+    except (ValueError, EOFError):
         pass
     print("-" * 50)
     print("\nI hope you enjoyed your fortunes...\n")
 
 def run_fortune_machine():
-    while True:
-        print_welcome()
-        choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
-        print("-" * 50)
-        print()
-        
-        if choice == '1':
-            get_one_fortune()
+    try:
+        while True:
+            print_welcome()
+            choice = input("Enter '1' for one, '2' for multiple, or '3' to quit: ").strip()
             print("-" * 50)
-            print("\nI hope you enjoyed your fortunes...\n")
-        elif choice == '2':
-            get_multiple_fortunes()
-        elif choice == '3':
-            break
+            print()
+            
+            if choice == '1':
+                get_one_fortune()
+                print("-" * 50)
+                print("\nI hope you enjoyed your fortunes...\n")
+            elif choice == '2':
+                get_multiple_fortunes()
+            elif choice == '3':
+                break
+    except EOFError:
+        pass
 
 if __name__ == "__main__":
     run_fortune_machine()
