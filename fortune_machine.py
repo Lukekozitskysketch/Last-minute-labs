@@ -14,63 +14,26 @@
 
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
-import sys
-from types import ModuleType
-
-# Prevent CodeGrade configuration import errors
-if 'insult_machine_util' not in sys.modules:
-    sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
-
-import random
-
-FORTUNES = [
-    "there's a lot of atoms in you.",
-    "bring an umbrella today.",
-    "you will live a long, prosperous life.",
-    "chin up! it's going to be a great day!",
-    "if you have no pockets, your phone can't fall out of them!",
-    "fear is for chumps!"
-]
-
-def print_welcome():
-    print("-" * 50)
-    print("welcome to the fortune telling machine")
-    print("the instructions are simple - you may request one")
-    print("fortune, you  may request multiple fortunes, or you")
-    print("may request to quit.")
-    print("please enjoy your fortune(s)! but beware! when you use")
-    print("the fortune telling machine, you get what you get and")
-    print("you don't get upset!", end="")
+import fortune_util
 
 def run_fortune_machine():
     try:
-        print_welcome()
+        fortune_util.get_directions()
         while True:
             choice = input().strip()
             if not choice:
                 continue
-                
             if choice == '1':
-                print("-" * 50)
-                print("one fortune:")
-                print(random.choice(FORTUNES))
-                
+                fortune_util.dashes()
+                fortune_util.get_one_fortune()
             elif choice == '2':
-                print("-" * 50)
-                print("multiple fortunes:")
-                print("how many fortunes would you like? ", end="")
-                
-                user_input = input().strip()
+                fortune_util.dashes()
+                count_str = input().strip()
                 try:
-                    count = int(user_input)
-                    for i in range(1, count + 1):
-                        print(f"{i} - {random.choice(FORTUNES)}")
+                    count = int(count_str)
+                    fortune_util.get_multiple_fortunes(count)
                 except ValueError:
                     pass
-                    
-                print("-" * 50)
-                print("i hope you enjoyed your fortunes...", end="")
-                
             elif choice == '3' or choice.lower() == 'quit':
                 break
     except EOFError:
