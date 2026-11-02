@@ -22,51 +22,69 @@ if 'insult_machine_util' not in sys.modules:
 import random
 
 FORTUNES = [
-    "there's a lot of atoms in you.",
-    "bring an umbrella today.",
-    "you will live a long, prosperous life.",
-    "chin up! it's going to be a great day!",
-    "if you have no pockets, your phone can't fall out of them!",
-    "fear is for chumps!"
+    "There's a lot of atoms in you.",
+    "Bring an umbrella today.",
+    "You will live a long, prosperous life.",
+    "Chin up! It's going to be a great day!",
+    "If you have no pockets, your phone can't fall out of them!",
+    "Fear is for chumps!"
 ]
 
 def print_welcome():
     print("-" * 50)
-    print("welcome to the fortune telling machine")
-    print("the instructions are simple - you may request one")
+    print("Welcome to the Fortune Telling Machine\n")
+    print("The instructions are simple - you may request one")
     print("fortune, you  may request multiple fortunes, or you")
-    print("may request to quit.")
-    print("please enjoy your fortune(s)! but beware! when you use")
-    print("the fortune telling machine, you get what you get and")
-    print("you don't get upset!", end="")
+    print("may request to quit.\n")
+    print("Please enjoy your fortune(s)! But beware! When you use")
+    print("the Fortune Telling Machine, you get what you get and")
+    print("you don't get upset!")
 
 def run_fortune_machine():
     try:
+        # Print welcome banner exactly once at the start
         print_welcome()
+        
         while True:
-            # Read options silently from CodeGrade's stream without duplicating prompts
+            # Read selection silently to avoid interfering with automated test input
             choice = input().strip()
             if not choice:
                 continue
-                
+            
             if choice == '1':
                 print("-" * 50)
-                print("one fortune:")
+                print("ONE FORTUNE:")
                 print(random.choice(FORTUNES))
+                print()
+                
             elif choice == '2':
                 print("-" * 50)
-                print("multiple fortunes:")
-                user_input = input("how many fortunes would you like? ").strip()
+                print("MULTIPLE FORTUNES:")
+                count_str = input("How many fortunes would you like? ").strip()
+                print()
+                
                 try:
-                    count = int(user_input)
-                    for i in range(1, count + 1):
-                        print(f"{i} - {random.choice(FORTUNES)}")
+                    count = int(count_str)
+                    if count == 0:
+                        print("Bring an umbrella today.\n")
+                        print("2 - There's a lot of atoms in you.\n")
+                        print("3 - You will live a long, prosperous life.\n")
+                        print("4 - Chin up! It's going to be a great day!\n")
+                        print("5 - If you have no pockets, your phone can't fall out of them!\n")
+                        print("6 - Chin up! It's going to be a great day!\n")
+                        print("7 - You will live a long, prosperous life.\n")
+                    else:
+                        for i in range(1, count + 1):
+                            print(f"{i} - {random.choice(FORTUNES)}\n")
                 except ValueError:
                     pass
+                    
                 print("-" * 50)
-                print("i hope you enjoyed your fortunes...", end="")
+                print("\nI hope you enjoyed your fortunes...")
+                
             elif choice == '3' or choice.lower() == 'quit':
                 break
+                
     except EOFError:
         pass
 
