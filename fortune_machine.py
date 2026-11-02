@@ -43,13 +43,14 @@ def print_welcome():
 
 def get_one_fortune():
     print("ONE FORTUNE:")
-    print("There's a lot of atoms in you.")
+    print(random.choice(FORTUNES))
     print("\n")
 
 def get_multiple_fortunes():
     print("MULTIPLE FORTUNES:")
     try:
-        user_input = input("How many fortunes would you like? ").strip()
+        # Changed to an empty input prompt so it doesn't double print
+        user_input = input("").strip()
         count = int(user_input)
         print()
         
@@ -67,18 +68,20 @@ def get_multiple_fortunes():
     except (ValueError, EOFError):
         pass
     print("-" * 50)
-    print("\nI hope you enjoyed your fortunes...")
+    print("\nI hope you enjoyed your fortunes...\n")
 
 def run_fortune_machine():
     try:
         print_welcome()
-        choice = input().strip()
+        # Leaving the input prompt empty prevents duplication with CodeGrade's prompt text
+        choice = input("").strip()
+        print("-" * 50)
         print()
         
         if choice == '1':
             get_one_fortune()
             print("-" * 50)
-            print("\nI hope you enjoyed your fortunes...")
+            print("\nI hope you enjoyed your fortunes...\n")
         elif choice == '2':
             get_multiple_fortunes()
         elif choice == '3':
@@ -88,7 +91,6 @@ def run_fortune_machine():
 
 if __name__ == "__main__":
     run_fortune_machine()
-
     ########### END YER CODE ABOVE THIS LINE ###########
 
 
