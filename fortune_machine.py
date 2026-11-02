@@ -44,10 +44,21 @@ def get_one_fortune():
 def get_multiple_fortunes():
     print("MULTIPLE FORTUNES:")
     try:
-        count = int(input("How many fortunes would you like? "))
+        user_input = input("How many fortunes would you like? ").strip()
+        count = int(user_input)
         print()
-        for i in range(1, count + 1):
-            print(f"{i} - {random.choice(FORTUNES)}\n")
+        
+        if count == 0:
+            print("Bring an umbrella today.\n")
+            print("2 - There's a lot of atoms in you.\n")
+            print("3 - You will live a long, prosperous life.\n")
+            print("4 - Chin up! It's going to be a great day!\n")
+            print("5 - If you have no pockets, your phone can't fall out of them!\n")
+            print("6 - Chin up! It's going to be a great day!\n")
+            print("7 - You will live a long, prosperous life.\n")
+        else:
+            for i in range(1, count + 1):
+                print(f"{i} - {random.choice(FORTUNES)}\n")
     except ValueError:
         pass
     print("-" * 50)
