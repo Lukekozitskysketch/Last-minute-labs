@@ -84,6 +84,7 @@ def run_fortune_machine():
             elif choice == '2':
                 get_multiple_fortunes()
             elif choice == '3':
+                print("Thank you for playing! Goodbye.")
                 break
     except EOFError:
         pass
