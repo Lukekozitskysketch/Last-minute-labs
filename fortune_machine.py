@@ -1,67 +1,90 @@
-import random
+# FILE NAME - fortune_machine.py
 
-FORTUNES = [
-    "There's a lot of atoms in you.",
-    "Bring an umbrella today.",
-    "You will live a long, prosperous life.",
-    "Chin up! It's going to be a great day!",
-    "If you have no pockets, your phone can't fall out of them!",
-    "Fear is for chumps!"
-]
+# NAME: 
+# DATE: 
+# BRIEF DESCRIPTION:  
 
-def print_welcome():
-    print("-" * 50)
-    print("Welcome to the Fortune Telling Machine\n")
-    print("The instructions are simple - you may request one")
-    print("fortune, you  may request multiple fortunes, or you")
-    print("may request to quit.\n")
-    print("Please enjoy your fortune(s)! But beware! When you use")
-    print("the Fortune Telling Machine, you get what you get and")
-    print("you don't get upset!")
-    print("-" * 50)
 
-def get_one_fortune():
-    print("ONE FORTUNE:")
-    print(random.choice(FORTUNES))
-    print()
 
-def get_multiple_fortunes():
-    print("MULTIPLE FORTUNES:")
-    try:
-        count = int(input("How many fortunes would you like? "))
-        print()
-        for i in range(1, count + 1):
-            print(f"{i} - {random.choice(FORTUNES)}\n")
-    except ValueError:
-        print("Please enter a valid number next time!\n")
+# 1. Make sure you fill out the comments above
+# 2. Write your code in the proper spot
+# 3. Be sure to answer the Reflection Questions and Attestation below
+# 4. The Sample Output has been included in this code for your convenience
+
+
+
+
+import fortune_util
 
 def main():
-    while True:
-        print_welcome()
-        print("Options:")
-        print("1. One Fortune")
-        print("2. Multiple Fortunes")
-        print("3. Quit")
-        choice = input("What would you like to do? (1/2/3): ").strip()
-        print()
-        if choice == "1":
-            print("-" * 50)
-            get_one_fortune()
-            print("-" * 50)
-            print("\nI hope you enjoyed your fortunes...\n")
-        elif choice == "2":
-            print("-" * 50)
-            get_multiple_fortunes()
-            print("-" * 50)
-            print("\nI hope you enjoyed your fortunes...\n")
-        elif choice == "3" or choice.lower() == 'quit':
-            print("Goodbye! May good fortune follow you.")
-            break
-        else:
-            print("Invalid option. Please choose 1, 2, or 3.\n")
+    run_fortune_machine()
 
-if __name__ == "__main__":
-    main()
+def run_fortune_machine():
+
+    ########## ENTER YER CODE BELOW THIS LINE ##########
+
+
+
+
+
+
+
+
+
+
+    ########### END YER CODE ABOVE THIS LINE ###########
+
+
+main()
+
+
+
+########################################
+#          SAMPLE OUTPUT
+########################################
+
+'''
+
+--------------------------------------------------
+Welcome to the Fortune Telling Machine
+
+The instructions are simple - you may request one
+fortune, you  may request multiple fortunes, or you
+may request to quit.
+
+Please enjoy your fortune(s)! But beware! When you use
+the Fortune Telling Machine, you get what you get and
+you don't get upset!
+
+--------------------------------------------------
+ONE FORTUNE:
+There's a lot of atoms in you.
+
+
+--------------------------------------------------
+MULTIPLE FORTUNES:
+How many fortunes would you like? 7
+
+1 - Bring an umbrella today.
+
+2 - There's a lot of atoms in you.
+
+3 - You will live a long, prosperous life.
+
+4 - Chin up! It's going to be a great day!
+
+5 - If you have no pockets, your phone can't fall out of them!
+
+6 - Chin up! It's going to be a great day!
+
+7 - You will live a long, prosperous life.
+
+--------------------------------------------------
+
+I hope you enjoyed your fortunes...
+
+'''
+
 ########################################
 #          REFLECTION QUESTIONS
 ########################################
@@ -71,12 +94,12 @@ if __name__ == "__main__":
 1. What was the hardest part of completing this lab? 
 
 
-getting all the fortunes to process
+
 
 
 
 2. What value do you see in having external modules?
-Its saves time and extra work
+
 
 
 
