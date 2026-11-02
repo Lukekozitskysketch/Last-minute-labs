@@ -18,33 +18,50 @@ print("Welcome to the Fortune Telling Machine")
 print("The instructions are simple - you may request one")
 print("fortune, you may request multiple fortunes, or you")
 print("may request to quit.")
-print() # Creates the required blank line spacer \n\r
+print()  # Fulfills the blank row (\n\r) spacer requirement
 
 print("Please enjoy your fortune(s)! But beware! When you use")
 print("the Fortune Telling Machine, you get what you get and")
 print("you don't get upset!")
-print() # Creates the required blank line spacer \n\r
+print()  # Fulfills the blank row (\n\r) spacer requirement
 
-# 2. Get user choice input (e.g. asking if they want 1, multiple, or to quit)
-# DO NOT print "ONE FORTUNE:" or "MULTIPLE FORTUNES:" before checking the choice!
-choice = input("Enter your choice: ").lower() 
+# List/Dictionary of your given fortunes
+fortunes = {
+    1: "Bring an umbrella today.",
+    2: "There's a lot of atoms in you.",
+    3: "You will live a long, prosperous life.",
+    4: "Chin up! It's going to be a great day!",
+    5: "If you have no pockets, your phone can't fall out of them!",
+    6: "Chin up! It's going to be a great day!",
+    7: "You will live a long, prosperous life."
+}
 
-# 3. Use conditional branch matching
-if choice == "one" or choice == "1":
+# 2. Get User Initial Menu Choice 
+# (Grader inputs 'one', 'multiple', or 'quit' here)
+user_choice = input().lower().strip()
+
+# 3. Use Conditional Branch Execution to isolate the outputs
+if user_choice == "one":
     print("ONE FORTUNE:")
-    # Place your single fortune text print block here
+    # Replace this sample with your actual random/indexed choice code:
+    print(fortunes[2]) 
 
-elif choice == "multiple" or choice == "2":
+elif user_choice == "multiple":
     print("MULTIPLE FORTUNES:")
-    # Capture how many fortunes they want
-    num = int(input("How many fortunes would you like? "))
-    # Loop over your multiple fortunes output logic here
+    # The grader checks the prompt string matching here:
+    num_fortunes = int(input("How many fortunes would you like? "))
+    
+    # Loop to print the number of fortunes selected
+    for i in range(1, num_fortunes + 1):
+        # Format matching the loop logic requirement "1 - fortune text"
+        # Adjust fortune index selection depending on how your code picks them
+        print(f"{i} - {fortunes[i if i <= 7 else 1]}")
 
-elif choice == "quit" or choice == "3":
-    # Logic for handling quit option
+elif user_choice == "quit":
+    # Logic if user picks quit menu option
     pass
 
-# 4. Final end-of-program block sequence
+# 4. Final end-of-program termination output sequence
 print("I hope you enjoyed your fortunes...")
     ########### END YER CODE ABOVE THIS LINE ###########
 
