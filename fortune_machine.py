@@ -15,7 +15,7 @@
 
     ########## ENTER YER CODE BELOW THIS LINE ##########
 import random
-
+# I used AI to make comments, I thought this would help me understand things
 # 1. Base Introductory Text Sequence
 print("Welcome to the Fortune Telling Machine")
 print("The instructions are simple - you may request one")
