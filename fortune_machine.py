@@ -17,11 +17,11 @@
 import fortune_util
 
 def main():
-    fortune_util.get_directions()
-    fortune_util.dashes()
-    
     while True:
         try:
+            fortune_util.get_directions()
+            fortune_util.dashes()
+            
             choice = input().strip().lower()
             
             if "one" in choice or choice == "1":
@@ -34,7 +34,6 @@ def main():
                 fortune_util.get_multiple_fortunes(num)
                 
             elif "quit" in choice or choice == "q":
-                fortune_util.dashes()
                 fortune_util.quit()
                 break
                 
