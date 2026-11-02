@@ -1,6 +1,4 @@
 import random
-import sys
-import types
 
 insults = [
     "You look like a bunch of rocks",
@@ -71,41 +69,4 @@ def goodbye():
     ]
     for line in lines:
         print(line)
-    return lines
-
-
-class ForceModuleFinder:
-
-    def find_spec(self, fullname, path, target=None):
-        if fullname == "insult_machine_util":
-            from importlib.machinery import ModuleSpec
-
-            return ModuleSpec(fullname, ForceModuleLoader())
-        return None
-
-
-class ForceModuleLoader:
-
-    def exec_module(self, module):
-        module.insults = insults
-        module.welcome = welcome
-        module.show_all_insults = show_all_insults
-        module.one_insult = one_insult
-        module.two_insults = two_insults
-        module.insult_specific_name = insult_specific_name
-        module.insult_x_number_of_insults = insult_x_number_of_insults
-        module.goodbye = goodbye
-
-
-sys.meta_path.insert(0, ForceModuleFinder())
-
-mod = types.ModuleType("insult_machine_util")
-mod.insults = insults
-mod.welcome = welcome
-mod.show_all_insults = show_all_insults
-mod.one_insult = one_insult
-mod.two_insults = two_insults
-mod.insult_specific_name = insult_specific_name
-mod.insult_x_number_of_insults = insult_x_number_of_insults
-mod.goodbye = goodbye
-sys.modules["insult_machine_util"] = mod
+    return line
