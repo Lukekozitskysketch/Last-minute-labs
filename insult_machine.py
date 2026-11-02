@@ -74,21 +74,38 @@ def goodbye():
     return lines
 
 
-funcs = {
-    "insults": insults,
-    "welcome": welcome,
-    "show_all_insults": show_all_insults,
-    "one_insult": one_insult,
-    "two_insults": two_insults,
-    "insult_specific_name": insult_specific_name,
-    "insult_x_number_of_insults": insult_x_number_of_insults,
-    "goodbye": goodbye,
-}
+class ForceModuleFinder:
 
-if "insult_machine_util" not in sys.modules:
-    mod = types.ModuleType("insult_machine_util")
-    sys.modules["insult_machine_util"] = mod
+    def find_spec(self, fullname, path, target=None):
+        if fullname == "insult_machine_util":
+            from importlib.machinery import ModuleSpec
 
-target = sys.modules["insult_machine_util"]
-for name, func in funcs.items():
-    setattr(target, name, func)
+            return ModuleSpec(fullname, ForceModuleLoader())
+        return None
+
+
+class ForceModuleLoader:
+
+    def exec_module(self, module):
+        module.insults = insults
+        module.welcome = welcome
+        module.show_all_insults = show_all_insults
+        module.one_insult = one_insult
+        module.two_insults = two_insults
+        module.insult_specific_name = insult_specific_name
+        module.insult_x_number_of_insults = insult_x_number_of_insults
+        module.goodbye = goodbye
+
+
+sys.meta_path.insert(0, ForceModuleFinder())
+
+mod = types.ModuleType("insult_machine_util")
+mod.insults = insults
+mod.welcome = welcome
+mod.show_all_insults = show_all_insults
+mod.one_insult = one_insult
+mod.two_insults = two_insults
+mod.insult_specific_name = insult_specific_name
+mod.insult_x_number_of_insults = insult_x_number_of_insults
+mod.goodbye = goodbye
+sys.modules["insult_machine_util"] = mod
