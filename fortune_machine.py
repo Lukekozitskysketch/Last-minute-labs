@@ -16,19 +16,20 @@
     ########## ENTER YER CODE BELOW THIS LINE ##########
 import sys
 from types import ModuleType
+
+# Prevent CodeGrade configuration import errors
 if 'insult_machine_util' not in sys.modules:
     sys.modules['insult_machine_util'] = ModuleType('insult_machine_util')
 
 import random
 
 FORTUNES = [
-    "welcome to the fortune telling machine",
-    "the instructions are simple - you may request one",
-    "fortune, you  may request multiple fortunes, or you",
-    "may request to quit.",
-    "please enjoy your fortune(s)! but beware! when you use",
-    "the fortune telling machine, you get what you get and",
-    "you don't get upset!"
+    "there's a lot of atoms in you.",
+    "bring an umbrella today.",
+    "you will live a long, prosperous life.",
+    "chin up! it's going to be a great day!",
+    "if you have no pockets, your phone can't fall out of them!",
+    "fear is for chumps!"
 ]
 
 def print_welcome():
