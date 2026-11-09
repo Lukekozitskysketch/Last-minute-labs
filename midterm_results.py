@@ -1,0 +1,11 @@
+# FILE NAME - midterm_results.py
+
+# NAME: 
+# DATE: 
+# BRIEF DESCRIPTION:  
+
+
+results = []
+
+# WRITE YOUR CODE HERE
+# MEET REQUIREMENTS AS STATED IN BRIGHTSPACE
