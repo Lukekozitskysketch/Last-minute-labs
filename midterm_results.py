@@ -7,9 +7,10 @@
 
 
 # WRITE YOUR CODE HERE
+results = []
+
 def main():
     print("Welcome to the Mathenator2000")
-    results = []
     
     while True:
         print("\nPlease choose from the following menu:")
