@@ -1,8 +1,8 @@
 # FILE NAME - midterm_results.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 11-8-26
+# BRIEF DESCRIPTION:  Math calcutlor and imput reciever 
 
 
 
