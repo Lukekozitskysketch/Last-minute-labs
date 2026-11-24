@@ -1,8 +1,8 @@
 # FILE NAME - file_reader_writer.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 11-23-26
+# BRIEF DESCRIPTION:  File reader based on user input
 
 
 
@@ -13,28 +13,22 @@
 
 
 
-
 def main():
-    writer_reader()
+    filename = input("File name? ")
+    file = open(filename, "a")
 
-def writer_reader():
-    '''
-    This function will ask the user to type the name
-    of a file. The program will open the file, ask the
-    user to enter a word (or phrase), and add that input
-    to the end of the file. 
+    word = input("Word to add? ")
+    file.write(word + "\n")
 
-    Then the file is closed.
+    file.close()
 
-    The file is reopened and the contents are output.
-    '''
-    
+    print()
 
+    file = open(filename, "r")
+    print(file.read(), end="")
+    file.close()
 
-
-main();
-
-
+main()
 
 
 ########################################
@@ -130,7 +124,7 @@ Sandslash
    take the contents of a file like the ones in the Sample Output and alphabetize them?
    Make sure you are specific - write down each step.
 
-
+First open the file in read mode ("r") and use .readlines() to put all the lines into a list then close the file next use .strip() on each word so the hidden \n line breaks dont mess anything up after that use .sort() on the list to put everything in A to Z order then open the same file again in write mode ("w") so it wipes the old unsorted text and finally loop through the sorted list and write each word back with a \n at the end and close it
 
 
 
@@ -150,7 +144,7 @@ Please gauge your utilization of AI on the following spectrum. Place an "X" in f
 of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
-[ ] I wrote the initial draft of the software but had AI help me make it better.
+[X] I wrote the initial draft of the software but had AI help me make it better.
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
 
@@ -163,7 +157,7 @@ may impede your understanding. Please rate how well you understand the concepts 
 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
+[X] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
 '''
