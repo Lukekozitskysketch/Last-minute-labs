@@ -1,6 +1,6 @@
 # FILE NAME - file_reader.py
 
-# NAME: Luke Kozitsky
+# NAME: Luke Kozitsky 
 # DATE: 11-23-26
 # BRIEF DESCRIPTION:  File reader
 
