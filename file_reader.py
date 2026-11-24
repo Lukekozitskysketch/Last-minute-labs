@@ -14,17 +14,11 @@
 
 
 
-def main():
-    file_reader()
+filename = input("File name? ")
+print()
 
-def file_reader():
-    filename = input("File name? ")
-    print()
-
-    with open(filename, "r") as file:
-        contents = file.read()
-        print(contents)
-
+with open(filename, "r") as file:
+    print(file.read(), end="")
 
 ########################################
 #          SAMPLE OUTPUT
