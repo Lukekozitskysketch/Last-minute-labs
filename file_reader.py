@@ -1,8 +1,8 @@
 # FILE NAME - file_reader.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Luke Kozitsky
+# DATE: 11-23-26
+# BRIEF DESCRIPTION:  File reader
 
 
 
@@ -18,15 +18,13 @@ def main():
     file_reader()
 
 def file_reader():
-    '''
-    This function will ask the user to input a file name. The
-    file will be opened and the contents will be output
-    to the screen.
-    '''
-    
+    filename = input("File name? ")
+    print()
 
+    with open(filename, "r") as file:
+        contents = file.read()
+        print(contents)
 
-main()
 
 ########################################
 #          SAMPLE OUTPUT
@@ -76,7 +74,7 @@ foible
 1. What is an example of a time when you might want to output the contents
    of a file?
 
-
+Display a text file
 
 
 
@@ -96,7 +94,7 @@ Please gauge your utilization of AI on the following spectrum. Place an "X" in f
 of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
-[ ] I wrote the initial draft of the software but had AI help me make it better.
+[X] I wrote the initial draft of the software but had AI help me make it better.
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
 
@@ -109,7 +107,7 @@ may impede your understanding. Please rate how well you understand the concepts 
 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
+[X] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
 '''
