@@ -13,10 +13,14 @@
 
 
 
+import os
+
+script_folder = os.path.dirname(os.path.abspath(__file__))
 filename = input("File name? ")
 print()
 
-with open(filename, "r") as file:
+full_path = os.path.join(script_folder, filename)
+with open(full_path, "r") as file:
     print(file.read(), end="")
 
 ########################################
