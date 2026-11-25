@@ -4,7 +4,7 @@
 # NAME: Luke Kozitsky
 # DATE: 11-25-26
 # BRIEF DESCRIPTION: This is a rock, paper, scissors game the first player to 10 will win
-# I wrote the foundation of the code, and gemini helped me finish it off
+# I wrote the foundation of the code, and gemini a little at finishing it off
 
 import random
 
