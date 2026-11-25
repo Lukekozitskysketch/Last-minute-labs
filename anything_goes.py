@@ -8,20 +8,22 @@
 
 import random
 
-# this shows the 3 choices in my game
+# this shows the 3 choices in my game and sets each score to 0
 choices = ["rock", "paper", "scissors"]
+round_history = []
 player_score = 0
 computer_score = 0
 
+
 # loop runs until we have a winner
 while player_score < 10 and computer_score < 10:
-    # player inout 
+    # player input reduced to lowercase
     player = input("\nChoose rock, paper, or scissors: ").lower()
 
-    # Decide whether the player entered a valid move
+    # make sure the user entered a valid choice
     if player not in choices:
         print("Invalid choice, try again.")
-        continue
+        continueinue
 
     # computer picks a move
     computer = random.choice(choices)
@@ -30,14 +32,17 @@ while player_score < 10 and computer_score < 10:
     # deice who won the round
     if player == computer:
         print("It's a tie!")
+        round_history.append(f"Tie ({player} vs {computer})")
     elif (player == "rock" and computer == "scissors") or \
          (player == "paper" and computer == "rock") or \
          (player == "scissors" and computer == "paper"):
         print("You win this round!")
         player_score += 1
+        round_history.append(f"You won ({player} beats {computer})")
     else:
         print("Computer wins this round!")
         computer_score += 1
+        round_history.append(f"Computer won ({computer} beats {player})")
 
     # shows the current score
     print(f"Score -> You: {player_score} | Computer: {computer_score}")
@@ -49,12 +54,21 @@ else:
     result = "The Computer won this game!"
 
 # this shows the final match to the screen
-print("\n" + result)
+print("\n" + "=" * 35)
+print(result)
+print(f"Total Rounds Played: {len(round_history)}")
+print("Match Recap:")
+for i in range(len(round_history)):
+    print(f"  Round {i + 1}: {round_history[i]}")
+print("=" * 35)print("\n" + result)
 
 # records the final score to a text file
 with open("rps_results.txt", "w") as file:
     file.write(f"Final Score -> You: {player_score} | Computer: {computer_score}\n")
-    file.write(result + "\n")
+    file.write(result + "\n\n")
+    file.write("Round-by-Round History:\n")
+    for i in range(len(round_history)):
+        file.write(f"  Round {i + 1}: {round_history[i]}\n")
 
 ########################################
 #          REFLECTION QUESTIONS
