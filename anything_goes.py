@@ -29,7 +29,7 @@ while player_score < 10 and computer_score < 10:
     computer = random.choice(choices)
     print(f"Computer chose: {computer}")
 
-    # deice who won the round
+    # decide who won the round
     if player == computer:
         print("It's a tie!")
         round_history.append(f"Tie ({player} vs {computer})")
