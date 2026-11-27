@@ -1,17 +1,8 @@
 import hashlib
 
-def main():
-    hashing()
-
-def hashing():
-
-
-
-
-
-
-
-main()
+message = input("Enter the message to hash: ")
+hashed = hashlib.sha256(message.encode()).hexdigest()
+print("Hashed: ", hashed)
 
 
 '''
