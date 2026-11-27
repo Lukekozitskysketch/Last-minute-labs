@@ -1,3 +1,6 @@
+# Luke Kozitsky
+#11-27-26
+# hashing based on user input
 import hashlib
 
 message = input("Enter the message to hash: ")
